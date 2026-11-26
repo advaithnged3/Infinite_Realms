@@ -380,3 +380,8 @@
 .final-art-pair figure:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(3,6,18,.72))}
 .final-art-pair figcaption{position:absolute;z-index:1;bottom:20px;left:0;right:0;text-align:center;color:#f7e9c6;font:900 12px 'DM Mono',monospace;letter-spacing:.3em}
 @media(max-width:600px){.final-art-pair{grid-template-columns:1fr}.final-art-pair img{max-height:220px}.final-art-pair figure:first-child{display:none}}
+
+
+.timer-urgent{color:#fff!important;background:rgba(214,61,75,.22)!important;border-color:rgba(255,120,128,.7)!important;animation:energy-pulse .65s infinite}
+.live-score b{display:inline-block;transition:transform .2s}
+.play-progress>div.done{background:linear-gradient(90deg,#4fcba0,#8ee2be)}
