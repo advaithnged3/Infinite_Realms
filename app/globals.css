@@ -5,3 +5,128 @@
 @media(max-width:900px){.nav-center{display:none}.ir-hero{min-height:650px}.hero-content{width:60%}.hero-visual{width:70%;opacity:.8}.realm-cards{grid-template-columns:repeat(3,1fr)}.play-layout{gap:4%}.question-art{min-height:360px}}
 @media(max-width:620px){.ir-nav{height:66px;padding:0 18px}.nav-pill{font-size:7px;padding:9px}.ir-hero{min-height:750px;padding:68px 22px 72px;align-items:flex-start}.hero-content{width:100%}.ir-hero h1{font-size:79px}.hero-content>p{max-width:315px}.hero-visual{width:100%;height:430px;top:330px;opacity:.48}.hero-image-frame{inset:0 -30% 0 -5%;background-position:58% center;mask-image:linear-gradient(90deg,transparent,black 20%,black 90%,transparent)}.hero-coordinate{top:12%;right:8%;font-size:7px}.hero-facts{gap:26px}.hero-index{left:22px;bottom:22px}.realm-picker,.how-section{padding:55px 20px}.section-intro{display:block}.section-intro>p{margin-top:15px}.realm-cards{grid-template-columns:repeat(2,1fr)}.realm-tile{min-height:175px;padding:15px}.realm-tile>b{font-size:22px}.tile-art{top:40px}.realm-selection{flex-wrap:wrap;gap:12px}.realm-selection button{width:100%;text-align:left;margin:8px 0}.how-section{display:block}.how-section h2{margin-bottom:25px}.rule-grid{gap:16px}.play-screen{padding:35px 19px 60px}.play-top{font-size:7px;gap:8px}.play-top>span:nth-child(2){display:none}.play-progress{margin:32px 0 42px}.play-layout{display:flex;flex-direction:column;gap:26px}.question-art{width:100%;min-height:230px}.question-side{width:100%}.question-side h2{font-size:40px;margin:18px 0 24px}.question-side form{flex-direction:column}.answer-submit{padding:15px}.answer-foot{margin-top:34px;font-size:6px}.reveal-card{padding:23px 21px}.reveal-card h3{font-size:36px}.final-screen{padding:50px 20px 60px}.final-score{font-size:90px}.final-actions{flex-direction:column;width:min(340px,100%)}.final-actions button{width:100%;justify-content:center}.answer-recap>div{grid-template-columns:25px 1fr 70px 35px;gap:5px;font-size:8px}.ir-footer{padding:19px 20px;flex-direction:column;gap:10px}.ir-footer span:nth-child(2){order:3}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+
+/* Infinite Realms — comic-book energy and universe-specific art direction */
+.ir-app{transition:background .7s ease}
+.realm-theme-mixed{--realm-a:#6f55c8;--realm-b:#e3a64e;--realm-c:#49b9d5}
+.realm-theme-mcu{--realm-a:#b64b35;--realm-b:#e7b45d;--realm-c:#4b9fbc}
+.realm-theme-dc-movies{--realm-a:#286a9d;--realm-b:#d5ba8b;--realm-c:#8057a8}
+.realm-theme-marvel-comics{--realm-a:#c13c56;--realm-b:#e5b44f;--realm-c:#8754b7}
+.realm-theme-dc-comics{--realm-a:#2f72a5;--realm-b:#c2d5ed;--realm-c:#54b9bb}
+.realm-theme-mixed .hero-image-frame,.realm-theme-mcu .hero-image-frame,.realm-theme-dc-movies .hero-image-frame,.realm-theme-marvel-comics .hero-image-frame,.realm-theme-dc-comics .hero-image-frame{background-image:linear-gradient(90deg,#050710 0%,rgba(5,7,16,.03) 42%,rgba(5,7,16,.02) 72%,#050710 100%),linear-gradient(0deg,#050710 0%,transparent 30%,transparent 85%,#050710 100%),radial-gradient(ellipse at 56% 42%,color-mix(in srgb,var(--realm-a) 62%,transparent),transparent 34%),url('/multiverse-heroes.svg')}
+.realm-theme-mcu{background:radial-gradient(ellipse at 78% 14%,rgba(182,75,53,.29),transparent 42%),radial-gradient(ellipse at 18% 72%,rgba(231,180,93,.13),transparent 38%),#070912}
+.realm-theme-dc-movies{background:radial-gradient(ellipse at 78% 12%,rgba(40,106,157,.34),transparent 43%),radial-gradient(ellipse at 15% 70%,rgba(128,87,168,.17),transparent 38%),#050914}
+.realm-theme-marvel-comics{background:radial-gradient(ellipse at 78% 12%,rgba(193,60,86,.3),transparent 43%),radial-gradient(ellipse at 15% 72%,rgba(135,84,183,.2),transparent 38%),#090711}
+.realm-theme-dc-comics{background:radial-gradient(ellipse at 78% 12%,rgba(47,114,165,.31),transparent 43%),radial-gradient(ellipse at 15% 72%,rgba(84,185,187,.15),transparent 38%),#050a13}
+.realm-theme-mixed{background:radial-gradient(ellipse at 78% 12%,rgba(111,85,200,.24),transparent 43%),radial-gradient(ellipse at 15% 72%,rgba(227,166,78,.14),transparent 38%),#050710}
+.realm-theme-mcu .nebula-a{background:#b64b35}.realm-theme-dc-movies .nebula-a,.realm-theme-dc-comics .nebula-a{background:#286a9d}.realm-theme-marvel-comics .nebula-a{background:#a63875}
+.realm-theme-mcu .overline,.realm-theme-mcu .realm-selection b{color:#f0a77b}.realm-theme-dc-movies .overline,.realm-theme-dc-comics .overline{color:#8dc8ef}.realm-theme-marvel-comics .overline{color:#ed91b2}
+.realm-theme-mcu .launch-button{background:#d9784f;border-color:#d9784f}.realm-theme-dc-movies .launch-button,.realm-theme-dc-comics .launch-button{background:#83bde3;border-color:#83bde3}.realm-theme-marvel-comics .launch-button{background:#dc7294;border-color:#dc7294}
+.realm-picker{background:linear-gradient(180deg,rgba(4,6,13,.76),rgba(5,7,16,.94))}
+.realm-tile{isolation:isolate}.realm-tile:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;background:repeating-linear-gradient(135deg,transparent 0 9px,rgba(255,255,255,.1) 10px,transparent 11px 19px);mask-image:linear-gradient(140deg,black,transparent 70%)}
+.question-art{isolation:isolate}.scene-illustration{transition:filter .5s,transform .8s}.question-art:hover .scene-illustration{transform:scale(1.035);filter:saturate(1.25)}
+.scene-illustration:before{mix-blend-mode:screen}.scene-avengers,.scene-guardians,.scene-league,.scene-xmen,.scene-fantastic4,.scene-titans{background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--realm-a) 75%,transparent),transparent 42%),linear-gradient(135deg,#182b4d,#090b18 72%)}
+.scene-stones,.scene-infinity,.scene-multiverse{background:radial-gradient(circle at 50% 45%,rgba(255,190,88,.5),rgba(135,80,190,.3) 22%,transparent 46%),linear-gradient(145deg,#34234e,#080b18)}
+.scene-factions,.scene-batfamily,.scene-street,.scene-squad{background:radial-gradient(ellipse at 50% 70%,rgba(223,104,76,.45),transparent 38%),linear-gradient(145deg,#2d253b,#080b18)}
+.scene-mjolnir,.scene-speedsters,.scene-lanterns{background:radial-gradient(ellipse at 50% 35%,rgba(116,204,243,.65),transparent 30%),linear-gradient(145deg,#172d50,#090b18)}
+.scene-places,.scene-dcplaces,.scene-mutantlands{background:radial-gradient(ellipse at 50% 60%,rgba(75,184,164,.52),transparent 40%),linear-gradient(145deg,#143a43,#080b18)}
+.scene-villains,.scene-newgods,.scene-crossovers{background:radial-gradient(circle at 50% 45%,rgba(194,70,92,.5),transparent 34%),linear-gradient(145deg,#301a35,#080b18)}
+.scene-spidey{background:radial-gradient(circle at 50% 40%,rgba(210,67,71,.5),transparent 35%),linear-gradient(145deg,#172a4b,#080b18)}
+.scene-magic{background:radial-gradient(circle at 50% 40%,rgba(145,104,210,.62),transparent 35%),linear-gradient(145deg,#2c214b,#080b18)}
+.answer-pool{margin:15px 0 18px;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pool-heading{display:flex;justify-content:space-between;gap:10px;color:#e3d4b6;font:9px 'DM Mono';letter-spacing:.12em;margin-bottom:10px}.pool-heading span{color:#828d9c;font-size:7px}
+.pool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;max-height:180px;overflow:auto;padding-right:4px}
+.pool-chip{display:grid;grid-template-columns:1fr auto;gap:3px 7px;padding:8px 9px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:3px}
+.pool-chip b{font:600 13px 'Barlow Condensed';color:#e9edf2}.pool-chip span{font:7px 'DM Mono';color:#aab3c1;letter-spacing:.08em}.pool-chip strong{grid-column:2;grid-row:1/3;align-self:center;font:700 15px 'Barlow Condensed';color:#eacb86}
+.pool-chip.pool-hit{border-color:rgba(157,226,186,.7);background:rgba(74,153,116,.14);box-shadow:inset 3px 0 #9de2ba}
+.reveal-card{max-height:90vh;overflow:auto}.reveal-correct .reveal-symbol{animation:symbol-float 2.5s ease-in-out infinite}
+@media(max-width:620px){.pool-grid{grid-template-columns:1fr 1fr}.pool-heading{font-size:8px}.pool-heading span{font-size:6px}}
+
+
+/* Vivid, kinetic comic-book multiverse */
+:root{--bg:#070816;--ink:#fffaf2;--muted:#c4c3d4;--gold:#ffe16b;--cyan:#63f3ff;--line:rgba(255,255,255,.18)}
+.ir-app{background:radial-gradient(ellipse at 12% 15%,rgba(255,54,133,.22),transparent 34%),radial-gradient(ellipse at 82% 22%,rgba(41,183,255,.22),transparent 36%),radial-gradient(ellipse at 50% 95%,rgba(161,74,255,.24),transparent 45%),#070816}
+.starfield{opacity:.72;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 90px 80px,#8df8ff,transparent),radial-gradient(2px 2px at 170px 130px,#ffdb74,transparent),radial-gradient(2px 2px at 260px 50px,#fff,transparent);background-size:310px 210px;animation:star-drift 18s linear infinite}
+.nebula{filter:blur(72px);opacity:.36;mix-blend-mode:screen;animation:nebula-drift 8s ease-in-out infinite alternate}
+.nebula-a{background:#ff287d}.nebula-b{background:#663dff;animation-duration:11s}
+.ir-nav{background:rgba(7,8,22,.76);border-color:rgba(255,255,255,.17)}
+.ir-brand span,.ir-brand b{color:#ffdb59;text-shadow:0 0 18px rgba(255,219,89,.7)}
+.nav-center{color:#c3c6e4}.nav-center i,.overline i{background:#57ffbd;box-shadow:0 0 16px #57ffbd}
+.overline{color:#ffe16b}
+.ir-hero{min-height:760px}
+.ir-hero h1{filter:drop-shadow(0 7px 0 rgba(0,0,0,.28));text-shadow:0 0 35px rgba(85,205,255,.16)}
+.ir-hero h1 em,.section-intro h2 em,.how-section h2 em{-webkit-text-stroke:1.5px #ffdc69}
+.hero-image-frame{background-image:linear-gradient(90deg,#070816 0%,rgba(7,8,22,.03) 30%,rgba(7,8,22,.02) 72%,#070816 100%),linear-gradient(0deg,#070816 0%,transparent 24%,transparent 84%,#070816 100%),url('/multiverse-heroes.svg');filter:saturate(1.65) contrast(1.1);animation:hero-float 8s ease-in-out infinite alternate,hero-pulse 6s ease-in-out infinite}
+@keyframes hero-pulse{0%,100%{filter:saturate(1.4) hue-rotate(-8deg) brightness(.96)}50%{filter:saturate(1.9) hue-rotate(12deg) brightness(1.18)}}
+.orbit-ring{border-width:2px;border-color:rgba(94,244,255,.55);box-shadow:0 0 26px rgba(94,244,255,.28),inset 0 0 25px rgba(94,244,255,.18)}
+.ring-two{border-color:rgba(255,211,91,.48)}
+.launch-button{background:linear-gradient(110deg,#ffe36c,#ff9b50 45%,#ff5c9d);border:0;color:#17101f;font-weight:700;box-shadow:0 0 28px rgba(255,146,88,.24);background-size:200% 100%;animation:button-flow 4s linear infinite}
+@keyframes button-flow{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+.launch-button:hover{background:linear-gradient(110deg,#fff39a,#ffb36f 45%,#ff7db4);box-shadow:0 0 45px rgba(255,116,148,.45)}
+.realm-picker,.how-section{background:rgba(8,8,25,.78);backdrop-filter:blur(10px)}
+.realm-tile{border:1px solid rgba(255,255,255,.22);box-shadow:inset 0 0 35px rgba(255,255,255,.025);background:linear-gradient(145deg,rgba(80,35,133,.8),rgba(14,16,42,.97))}
+.realm-tile:before{border-color:rgba(98,241,255,.48);box-shadow:0 0 0 17px rgba(98,241,255,.055),0 0 0 36px rgba(98,241,255,.035),0 0 40px rgba(98,241,255,.2)}
+.tile-1{background:linear-gradient(145deg,rgba(185,48,65,.78),rgba(20,13,35,.97))}
+.tile-2{background:linear-gradient(145deg,rgba(23,88,165,.85),rgba(10,14,35,.97))}
+.tile-3{background:linear-gradient(145deg,rgba(155,39,112,.8),rgba(22,10,37,.97))}
+.tile-4{background:linear-gradient(145deg,rgba(0,128,145,.76),rgba(9,17,37,.97))}
+.realm-tile>b{font-size:28px;text-shadow:0 2px 15px rgba(0,0,0,.6)}
+.realm-tile small{color:#e5e5f4}
+.tile-art{font-size:44px;filter:drop-shadow(0 0 18px currentColor)}
+.tile-selected{border-color:#ffe16b;box-shadow:0 0 0 1px #ffe16b,0 0 35px rgba(255,225,107,.2)}
+.play-screen{position:relative}
+.play-top,.question-meta,.art-meta{color:#d2d8f1}
+.play-progress>div.current{background:#ffdd62;box-shadow:0 0 18px #ffdd62}
+.question-art{border:1px solid rgba(255,255,255,.24);box-shadow:0 18px 55px rgba(0,0,0,.3)}
+.scene-illustration{animation:scene-alive 12s ease-in-out infinite alternate}
+.scene-illustration:before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 0deg,transparent 0 18%,rgba(255,255,255,.17) 22%,transparent 28% 48%,rgba(255,255,255,.1) 55%,transparent 62%);animation:portal-spin 22s linear infinite}
+@keyframes scene-alive{0%{transform:scale(1) translateY(0);filter:saturate(1.25)}50%{filter:saturate(1.9) brightness(1.15)}100%{transform:scale(1.06) translateY(-8px);filter:saturate(1.55)}}
+@keyframes portal-spin{to{transform:rotate(360deg)}}
+.question-side h2{color:#fff8e9;text-shadow:0 3px 25px rgba(85,205,255,.16)}
+.answer-label{color:#ffe16b}
+.question-side input{background:rgba(16,17,44,.9);border:1px solid rgba(112,222,255,.55);color:white;box-shadow:inset 0 0 25px rgba(58,140,255,.08)}
+.question-side input:focus{border-color:#ffdb61;box-shadow:0 0 0 3px rgba(255,219,97,.13),0 0 30px rgba(65,206,255,.15)}
+.answer-submit{background:linear-gradient(110deg,#ffdd61,#ff8c67 55%,#e75b9c);color:#1a1021;border:0;font-weight:700}
+.hint-trigger{color:#74e9ff}
+.hint-panel{background:rgba(51,37,102,.6);border:1px solid rgba(154,128,255,.55);color:#f5eaff}
+.reveal-backdrop{background:rgba(3,4,17,.82);backdrop-filter:blur(12px)}
+.reveal-card{border:1px solid rgba(255,221,97,.6);background:radial-gradient(ellipse at 50% 0%,rgba(96,51,160,.42),transparent 52%),linear-gradient(150deg,#1b1740,#090b20 70%);box-shadow:0 0 70px rgba(126,65,255,.25)}
+.reveal-symbol{color:#ffe16b;text-shadow:0 0 30px #ffb34b}
+.points-won{color:#7bffca;text-shadow:0 0 22px rgba(123,255,202,.35)}
+.rarity-line{color:#fce8b2}
+.answer-pool{border-color:rgba(255,255,255,.2)}
+.pool-heading{color:#ffe16b}
+.pool-heading span{color:#9edfff}
+.pool-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-height:290px;gap:7px}
+.pool-chip{background:linear-gradient(145deg,rgba(69,54,130,.42),rgba(14,18,45,.88));border-color:rgba(151,171,255,.22);min-height:52px}
+.pool-chip b{color:#fff;font-size:14px}.pool-chip span{color:#a9eaff}.pool-chip strong{color:#ffe16b;font-size:17px}
+.pool-chip.pool-hit{border-color:#68ffc5;background:rgba(31,146,115,.24);box-shadow:inset 3px 0 #68ffc5,0 0 18px rgba(104,255,197,.15)}
+.final-screen{background:radial-gradient(circle at 50% 22%,rgba(255,85,157,.24),transparent 35%),radial-gradient(circle at 18% 70%,rgba(53,184,255,.19),transparent 36%),#08091b}
+.destination-core{background:radial-gradient(circle,#fff4a5,#ffad55 40%,#b14cff 70%,transparent);box-shadow:0 0 70px rgba(255,167,83,.6);animation:core-throb 3s ease-in-out infinite}
+@keyframes core-throb{50%{transform:scale(1.14);filter:hue-rotate(30deg)}}
+.ir-footer{color:#a8b2d3}
+@media(max-width:720px){.ir-hero{min-height:750px}.hero-content{width:100%}.hero-visual{width:100%;opacity:.48}.pool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.realm-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Category-specific object-led front-screen galleries */
+.realm-theme-mcu .hero-image-frame{background-image:linear-gradient(90deg,#070816 0%,rgba(7,8,22,.02) 36%,rgba(7,8,22,.02) 75%,#070816 100%),linear-gradient(0deg,#070816 0%,transparent 22%,transparent 84%,#070816 100%),url('/marvel-realm.svg');background-size:cover;background-position:center;filter:saturate(1.45)}
+.realm-theme-marvel-comics .hero-image-frame{background-image:linear-gradient(90deg,#070816 0%,rgba(7,8,22,.03) 36%,rgba(7,8,22,.02) 75%,#070816 100%),linear-gradient(0deg,#070816 0%,transparent 22%,transparent 84%,#070816 100%),url('/marvel-realm.svg');background-size:cover;background-position:center;filter:saturate(1.8) hue-rotate(-12deg)}
+.realm-theme-dc-movies .hero-image-frame{background-image:linear-gradient(90deg,#070816 0%,rgba(7,8,22,.02) 36%,rgba(7,8,22,.02) 75%,#070816 100%),linear-gradient(0deg,#070816 0%,transparent 22%,transparent 84%,#070816 100%),url('/dc-realm.svg');background-size:cover;background-position:center;filter:saturate(1.35)}
+.realm-theme-dc-comics .hero-image-frame{background-image:linear-gradient(90deg,#070816 0%,rgba(7,8,22,.02) 36%,rgba(7,8,22,.02) 75%,#070816 100%),linear-gradient(0deg,#070816 0%,transparent 22%,transparent 84%,#070816 100%),url('/dc-realm.svg');background-size:cover;background-position:center;filter:saturate(1.8) hue-rotate(18deg)}
+.realm-theme-mixed .hero-image-frame{background-image:linear-gradient(90deg,#070816 0%,rgba(7,8,22,.03) 36%,rgba(7,8,22,.02) 75%,#070816 100%),linear-gradient(0deg,#070816 0%,transparent 22%,transparent 84%,#070816 100%),url('/multiverse-heroes.svg')}
+.hero-visual:before{content:"";position:absolute;inset:-10%;z-index:1;pointer-events:none;background:repeating-linear-gradient(115deg,transparent 0 90px,rgba(93,241,255,.075) 92px,transparent 95px 190px);mix-blend-mode:screen;animation:light-ribbons 16s linear infinite}
+.hero-visual:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 68% 52%,transparent 0 26%,rgba(255,255,255,.06) 27%,transparent 29% 100%);animation:portal-breathe 7s ease-in-out infinite}
+@keyframes light-ribbons{to{transform:translateX(130px)}}
+@keyframes portal-breathe{0%,100%{transform:scale(.94);opacity:.25}50%{transform:scale(1.08);opacity:.85}}
+.hero-image-frame{animation:hero-float 8s ease-in-out infinite alternate,hero-pulse 6s ease-in-out infinite,hero-pan 26s ease-in-out infinite alternate}
+@keyframes hero-pan{0%{background-position:48% 50%}100%{background-position:56% 44%}}
+.ir-hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-1px;height:130px;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 100%,rgba(83,222,255,.17),transparent 68%);animation:surface-swell 5s ease-in-out infinite alternate}
+@keyframes surface-swell{0%{transform:translateY(16px) scaleX(.92);opacity:.45}100%{transform:translateY(-9px) scaleX(1.08);opacity:.9}}
+.realm-theme-mcu .tile-art,.realm-theme-marvel-comics .tile-art{color:#ff795d}
+.realm-theme-dc-movies .tile-art,.realm-theme-dc-comics .tile-art{color:#70f2c5}
+.realm-theme-mcu .launch-button,.realm-theme-marvel-comics .launch-button{background:linear-gradient(100deg,#ff6c4d,#ffbf53,#f14d8b)}
+.realm-theme-dc-movies .launch-button,.realm-theme-dc-comics .launch-button{background:linear-gradient(100deg,#4de8d2,#61aaff,#8c76ff)}
+.realm-theme-mcu .overline,.realm-theme-marvel-comics .overline{color:#ff9b7d}
+.realm-theme-dc-movies .overline,.realm-theme-dc-comics .overline{color:#78f0d1}
+@media(prefers-reduced-motion:reduce){.starfield,.nebula,.hero-image-frame,.hero-visual:before,.hero-visual:after,.ir-hero:after,.scene-illustration,.launch-button,.destination-core{animation:none!important;transition:none!important}}
