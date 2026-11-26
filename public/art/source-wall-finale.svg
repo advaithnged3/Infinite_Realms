@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+<defs>
+ <radialGradient id="space"><stop stop-color="#263f8f"/><stop offset=".55" stop-color="#101638"/><stop offset="1" stop-color="#050815"/></radialGradient>
+ <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9e8ff"/><stop offset=".3" stop-color="#7d9edb"/><stop offset=".65" stop-color="#344b91"/><stop offset="1" stop-color="#101b49"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff4b5"/><stop offset="1" stop-color="#ff8c56"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#space)"/>
+<g opacity=".6" fill="#fff"><circle cx="170" cy="170" r="2"/><circle cx="310" cy="80" r="3"/><circle cx="500" cy="230" r="2"/><circle cx="710" cy="110" r="2"/><circle cx="940" cy="190" r="3"/><circle cx="1240" cy="95" r="2"/><circle cx="1440" cy="260" r="2"/><circle cx="132" cy="480" r="2"/><circle cx="360" cy="620" r="2"/><circle cx="1210" cy="620" r="3"/></g>
+<ellipse cx="820" cy="480" rx="620" ry="340" fill="#4569c4" opacity=".16" filter="url(#blur)"/>
+<path d="M0 650 Q250 500 500 570 T1000 560 T1600 620 V900 H0Z" fill="#090e24"/>
+<path d="M330 900 L430 220 L550 160 L670 210 L750 900Z" fill="url(#wall)" opacity=".9"/>
+<path d="M760 900 L830 120 L1000 40 L1170 180 L1280 900Z" fill="url(#wall)"/>
+<path d="M410 300 L530 270 L650 340 L610 900 L350 900Z" stroke="#e4edff" stroke-width="6" opacity=".55"/>
+<path d="M880 190 L1000 125 L1120 210 L1190 900 L790 900Z" stroke="#e4edff" stroke-width="7" opacity=".45"/>
+<g stroke="#c6dcff" stroke-width="3" opacity=".35"><path d="M390 440L650 500M365 580L635 630M840 390L1160 430M820 590L1180 640M490 240L530 900M980 150L1020 900"/></g>
+<path d="M0 720 Q180 590 370 690 L540 900 H0Z" fill="#111a42"/>
+<path d="M1600 700 Q1400 570 1230 690 L1080 900 H1600Z" fill="#111a42"/>
+<circle cx="800" cy="400" r="245" stroke="#ffc978" stroke-width="5" opacity=".8" filter="url(#soft)"/>
+<circle cx="800" cy="400" r="215" stroke="#7ee6ff" stroke-width="2" opacity=".8"/>
+<circle cx="800" cy="400" r="180" stroke="#ffc978" stroke-width="1" opacity=".5"/>
+<path d="M800 160 L825 370 L800 400 L775 370Z" fill="url(#glow)"/>
+<path d="M800 640 L825 430 L800 400 L775 430Z" fill="#83e9ff"/>
+<path d="M560 400 L770 375 L800 400 L770 425Z" fill="#ffc978"/>
+<path d="M1040 400 L830 375 L800 400 L830 425Z" fill="#83e9ff"/>
+<g fill="#f9e9bd"><circle cx="800" cy="400" r="8"/><circle cx="560" cy="400" r="4"/><circle cx="1040" cy="400" r="4"/></g>
+<text x="800" y="820" text-anchor="middle" fill="#d9e7ff" font-family="Arial,sans-serif" font-size="28" letter-spacing="12" opacity=".85">THE SOURCE WALL</text>
+</svg>
