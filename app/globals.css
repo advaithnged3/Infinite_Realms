@@ -385,3 +385,27 @@
 .timer-urgent{color:#fff!important;background:rgba(214,61,75,.22)!important;border-color:rgba(255,120,128,.7)!important;animation:energy-pulse .65s infinite}
 .live-score b{display:inline-block;transition:transform .2s}
 .play-progress>div.done{background:linear-gradient(90deg,#4fcba0,#8ee2be)}
+
+
+/* Daily set selection + in-flow manual progression */
+.daily-set-picker{margin:18px auto 0;padding:22px;max-width:1000px;border:2px solid #18213b;border-radius:22px;background:linear-gradient(135deg,#fff,#f4f8ff);box-shadow:5px 6px 0 #18213b}
+.daily-set-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;color:#18213b}
+.daily-set-heading>b{font:1000 17px 'Barlow Condensed',sans-serif;letter-spacing:.08em}
+.daily-set-heading>span,.reset-note{color:#596783;font:800 10px 'DM Mono',monospace;letter-spacing:.07em}
+.daily-set-buttons{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:9px}
+.daily-set-buttons button{display:grid;gap:4px;justify-items:center;padding:10px 4px;border:1.5px solid #cbd4e6;border-radius:13px;background:#fff;color:#18213b;cursor:pointer;transition:transform .16s,background .16s,border-color .16s,box-shadow .16s}
+.daily-set-buttons button:hover{transform:translateY(-4px);border-color:#315fd4;box-shadow:0 4px 0 rgba(49,95,212,.18)}
+.daily-set-buttons button small{font:800 8px 'DM Mono',monospace;color:#7c86a0}
+.daily-set-buttons button b{font:1000 24px 'Barlow Condensed',sans-serif}
+.daily-set-buttons button span{font:800 7px 'DM Mono',monospace;color:#6e7892}
+.daily-set-buttons button.daily-set-selected{background:#ffda69;border:2px solid #18213b;box-shadow:3px 3px 0 #18213b}
+.daily-set-buttons button.daily-set-selected span{color:#18213b}
+.daily-set-start{display:block;margin:18px auto 0;padding:13px 24px;border:2px solid #18213b;border-radius:999px;background:#315fd4;color:#fff;font:900 11px 'DM Mono',monospace;letter-spacing:.08em;box-shadow:4px 4px 0 #18213b;cursor:pointer;transition:transform .16s,box-shadow .16s}
+.daily-set-start:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #18213b}
+.realm-selection .reset-note{margin-left:auto}
+.flow-next{align-self:center;flex-shrink:0;padding:12px 18px;border:2px solid #18213b;border-radius:999px;background:#ffcf3f;color:#18213b;font:1000 11px 'DM Mono',monospace;letter-spacing:.06em;box-shadow:3px 3px 0 #18213b;cursor:pointer;transition:transform .16s,box-shadow .16s}
+.flow-next:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #18213b}
+.flow-feedback{flex-wrap:wrap}
+.flow-feedback>div{min-width:150px}
+@media(max-width:760px){.daily-set-buttons{grid-template-columns:repeat(5,minmax(0,1fr))}.daily-set-heading{align-items:flex-start;flex-direction:column}.realm-selection .reset-note{margin-left:0}}
+@media(max-width:460px){.daily-set-picker{padding:15px}.daily-set-buttons{gap:6px}.daily-set-buttons button b{font-size:21px}.flow-next{width:100%;margin-top:7px}.flow-feedback{gap:9px}}
