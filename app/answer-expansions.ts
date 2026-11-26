@@ -584,6 +584,10 @@ function allSpellings(option: AnswerOption): string[] {
   return Array.from(new Set([option.value, ...option.aliases, ...identities]));
 }
 
+export function answerIdentityKeys(option: AnswerOption): string[] {
+  return Array.from(new Set(allSpellings(option).map(clean).filter(Boolean)));
+}
+
 export function resolveAnswer(question: Question, raw: string): AnswerOption | null {
   const typed = clean(raw);
   if (!typed) return null;
