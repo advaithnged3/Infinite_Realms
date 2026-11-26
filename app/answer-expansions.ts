@@ -88,6 +88,145 @@ const banks: Record<string, { topic: string; rows: Extra[] }> = {
   ]}
 };
 
+
+const deepCuts: Record<string, Extra[]> = {
+  "mcu-01": [["Ajak",60],["Ikaris",30],["Sprite",60],["Druig",30],["Kingo",30],["Arishem",30],["Xu Wenwu",30,["Wenwu"]],["Xialing",30],["Ying Li",60],["Katy Chen",30,["Katy"]],["Trevor Slattery",30],["Dar-Benn",60],["G'iah",30],["Talos",30],["Elektra Natchios",60],["Echo",30,["Maya Lopez"]],["Jack Duquesne",60,["Swordsman"]],["Arthur Harrow",30],["Khonshu",30],["Layla El-Faouly",30,["Scarlet Scarab"]],["Ravonna Renslayer",30],["Brad Wolfe",60,["X-5"]],["O.B.",60,["Ouroboros"]],["B-15",30],["The Ancient One",30],["Mordo",30,["Karl Mordo"]],["Ramonda",30]],
+  "mcu-02": [["The Infinity Gauntlet",10,["Gauntlet"]],["The Tesseract",10,["Cosmic Cube"]],["The Eye of Agamotto",30],["The Aether",30],["The Orb of Morag",30],["Eson the Searcher",60],["The Celestials",60],["The Black Order",60],["Cull Obsidian",60],["Ebony Maw",30],["Corvus Glaive",60],["Proxima Midnight",60],["Johann Schmidt",30,["Red Skull"]],["The Living Tribunal",100],["Eternity",60],["Death",85],["The Grandmaster",85]],
+  "mcu-03": [["The Howling Commandos",30],["The Strategic Scientific Reserve",60,["SSR"]],["The Winter Guard",85],["The United States Air Force",60],["Stark Industries",30],["Pym Technologies",30],["The Roxxon Corporation",30,["Roxxon"]],["The Midnight Angels",60],["The Ancestral Council",60],["The Kree Empire",30],["The Skrull Empire",30],["The Council of Kangs",60],["The TVA Minutemen",60],["The Hand",60],["The Tracksuit Mafia",60],["The War Dogs",60],["The Extremis program",60]],
+  "mcu-04": [["Baldur",60],["Tyr",60],["Love",60],["Gorr the God Butcher",30],["Bor",60,["Borr"]],["The Destroyer",60],["The Frost Giants",60],["The Einherjar",60],["The Valkyries",30],["Beta Ray Bill",85],["The Serpent",100]],
+  "mcu-05": [["London",10],["San Francisco",10],["Los Angeles",30],["Washington, D.C.",10,["Washington DC"]],["Queens",10],["Brooklyn",10],["Sokovia",30],["Latveria",60],["K'un-Lun",60,["Kun Lun"]],["Madripoor",30],["New York Sanctum",30],["Hong Kong Sanctum",60],["London Sanctum",60],["The Ancestral Plane",30],["The Garden",60],["The Sacred Timeline",30],["The Quantum Void",60],["The World Forge",85]],
+  "mcu-06": [["The Abilisk",60],["The Sovereign",30],["J'son",85],["The Universal Church of Truth",60],["Rhomann Dey",60],["Irani Rael",60],["Nova Prime",60],["The Badoon",60],["The Stark",85],["The Kree Accusers",60]],
+  "mcu-07": [["Victor Timely",30],["The Beyonder",85],["Earth-838 Reed Richards",60],["Earth-838 Captain Carter",60],["Earth-838 Black Bolt",60],["Earth-838 Maria Rambeau",60],["Earth-838 Professor X",60],["The Council of Kangs",30],["The TVA Minutemen",60],["The Void's Alioth",60]],
+  "dcm-01": [["Freddy Freeman",30],["Mary Bromfield",30,["Mary Marvel"]],["Darla Dudley",60],["Eugene Choi",60],["Pedro Peña",60],["Antiope",30],["Hippolyta",10],["Steve Trevor",10],["Nuidis Vulko",30],["King Nereus",60],["Atlanna",30],["Martha Wayne",30],["Thomas Wayne",30],["Patty Spivot",60],["Henry Allen",30],["Nora Allen",30],["Alura In-Ze",60],["Zor-El",60],["Jor-El",10],["Faora-Ul",30],["Lara Lor-Van",60],["Krypto",30],["Jimmy Olsen",30]],
+  "dcm-02": [["Blüdhaven",30,["Bludhaven"]],["Chernobyl",60],["Gotham Harbor",30],["Gotham City Police Department",30,["GCPD"]],["Themysciran palace",60],["Kryptonopolis",85],["Argo City",60],["Phantom Zone",30],["Bialya",85],["Markovia",85],["Santa Prisca",60],["The Batcave",10],["The Fortress of Solitude",10],["The Daily Planet",10],["Themyscira",10]],
+  "dcm-03": [["Lucius Fox",10],["Leslie Thompkins",60],["Cassandra Cain",30],["Stephanie Brown",30],["Duke Thomas",60],["Kate Kane",30],["Azrael",60,["Jean-Paul Valley"]],["Huntress",30,["Helena Bertinelli"]],["The Ventriloquist",60],["Professor Pyg",85],["Hugo Strange",60],["Killer Moth",60],["Anarky",60],["Talon",60],["Julia Pennyworth",60],["Bette Kane",60]],
+  "dcm-04": [["The Eradicator",60],["Manchester Black",60],["Mongul",30],["Lobo",30],["Black Hand",60],["Felix Faust",60],["Klarion the Witch Boy",60],["Circe",30],["The Anti-Monitor",30],["Parademons",30],["The Furies",60],["Professor Zoom",30],["Captain Cold",30],["Heat Wave",60],["Mirror Master",60],["Weather Wizard",60],["Gorilla Grodd",30]],
+  "dcm-05": [["Chato Santana",60,["El Diablo"]],["Christopher Weiss",60,["Slipknot"]],["George Harkness",60,["Captain Boomerang"]],["Cassandra Cain",60],["Bronze Tiger",60],["Black Spider",60],["Plastique",60],["Killer Frost",30],["Rick Flag Jr.",60],["Cleo Cazo",30,["Ratcatcher 2"]],["Mongal",60],["Blackguard",60],["TDK",60]],
+  "dcm-06": [["Thomas Wayne",30],["Martha Wayne",30],["Jor-El",10],["Lara Lor-Van",60],["Zod",10,["Dru-Zod"]],["Kara Zor-El",30,["Supergirl"]],["Krypto",30],["Alfred Pennyworth",10],["Lois Lane",10],["Jimmy Olsen",30],["Perry White",30],["Lucius Fox",30],["Harvey Dent",30],["Selina Kyle",10],["Edward Nygma",30],["Oswald Cobblepot",30],["Diana Prince",10],["Arthur Curry",10],["Barry Allen",10]],
+  "dcm-07": [["Etrigan",30],["Jason Blood",30],["John Constantine",10],["Zatanna Zatara",10],["Madame Xanadu",30],["Deadman",30],["Swamp Thing",30],["The Spectre",30],["Ragman",60],["The Demon",30],["Neron",60],["Trigon",30],["Mordru",60],["Felix Faust",30],["Klarion",60],["Circe",30],["Doctor Fate",10],["Kent Nelson",30],["Nabu",60]],
+  "mar-01": [["Forge",30],["Banshee",30],["Sunfire",30],["Thunderbird",30,["John Proudstar"]],["Warpath",30,["James Proudstar"]],["Cecilia Reyes",60],["M",30,["Monet St. Croix"]],["Chamber",30,["Jono Starsmore"]],["Husk",30,["Paige Guthrie"]],["Skin",30,["Angelo Espinosa"]],["Magma",30,["Amara Aquilla"]],["Cypher",30,["Doug Ramsey"]],["Warlock",30],["Karma",30,["Xi'an Coy Manh"]],["Mirage",30,["Dani Moonstar"]],["Cannonball",30,["Sam Guthrie"]],["Wolfsbane",30,["Rahne Sinclair"]],["Boom-Boom",30,["Tabitha Smith"]],["Rictor",30,["Julio Richter"]],["Shatterstar",30],["Frenzy",60],["Mimic",60],["Exodus",60],["Hope Summers",30],["Bishop",30,["Lucas Bishop"]],["Polaris",30,["Lorna Dane"]],["Daken",60,["Akihiro"]],["X-23",30,["Laura Kinney"]]],
+  "mar-02": [["The Jackal",30,["Miles Warren"]],["Tombstone",30,["Lonnie Lincoln"]],["Hammerhead",30],["Silvermane",60],["The Rose",60,["Richard Fisk"]],["The Enforcers",60],["Spencer Smythe",60],["Alistair Smythe",60],["The Spot",30,["Jonathan Ohnn"]],["Mister Negative",30,["Martin Li"]],["Screwball",60],["The Lizard",10,["Curt Connors"]],["The Chameleon",30,["Dmitri Smerdyakov"]],["The Beetle",30],["The Puma",60,["Thomas Fireheart"]],["Swarm",60],["Slyde",85],["The Thousand",85],["Sin-Eater",60],["Kindred",60],["Demogoblin",60],["Shriek",60],["Carrion",60],["Cardiac",60]],
+  "mar-03": [["The Living Tribunal",30],["Eternity",10],["Infinity",30],["Death",30],["Oblivion",30],["The In-Betweener",60],["Master Order",60],["Lord Chaos",60],["The Beyonder",30],["Molecule Man",30,["Owen Reece"]],["Magus",30],["Pip the Troll",60],["The Watcher",30,["Uatu"]],["Nebula",30],["Gamora",30],["Silver Surfer",30],["Doctor Doom",30,["Victor von Doom","Victor Von Doom","Victor Doom","Doom","Dr. Doom","Dr Doom"]],["Reed Richards",30,["Mister Fantastic"]],["Sue Storm",30,["Invisible Woman"]],["Namor",30],["Black Panther",30,["T'Challa"]],["Wolverine",30,["Logan"]]],
+  "mar-04": [["The One Above All",10],["The One Below All",30],["The Living Tribunal",10],["Eternity",10],["Infinity",10],["Death",10],["Oblivion",30],["The Beyonder",10],["Molecule Man",30,["Owen Reece"]],["The Phoenix Force",10],["The First Firmament",60],["The Fulcrum",60],["The In-Betweener",30],["Master Order",30],["Lord Chaos",30],["The Stranger",30],["The Elders of the Universe",30],["The Celestials",10],["The Watchers",30],["The Builders",60],["The Aspirants",60]],
+  "mar-05": [["Doctor Doom",10,["Doom","Victor von Doom","Victor Von Doom","Victor Doom","Dr. Doom","Dr Doom","Doctor Victor von Doom"]],["Valeria Richards",30],["Franklin Richards",30],["Alicia Masters",30],["H.E.R.B.I.E.",60,["Herbie"]],["Crystal",30],["Medusa",30],["Black Bolt",30],["Lockjaw",30],["Wyatt Wingfoot",60],["Lyja",60],["Dragon Man",60],["The Wizard",30,["Bentley Wittman"]],["Puppet Master",30,["Phillip Masters"]],["Mole Man",10,["Harvey Elder"]],["Annihilus",10],["Super-Skrull",30,["Kl'rt"]],["Blastaar",60],["Terrax",60],["Klaw",30],["Galactus",10],["The Impossible Man",60],["The Mad Thinker",30],["Red Ghost",60],["Diablo",60],["Kristoff Vernard",60]],
+  "mar-06": [["Cloak",30,["Tyrone Johnson"]],["Dagger",30,["Tandy Bowen"]],["Misty Knight",30],["Colleen Wing",30],["White Tiger",30],["Ava Ayala",60],["Jessica Jones",10],["Luke Cage",10,["Power Man"]],["Iron Fist",10,["Danny Rand"]],["Daredevil",10,["Matt Murdock"]],["Punisher",10,["Frank Castle"]],["Moon Knight",30,["Marc Spector"]],["Echo",30,["Maya Lopez"]],["Ronin",30],["Night Thrasher",60],["D-Man",60,["Demolition Man"]],["Cardiac",60],["Paladin",60],["Silver Sable",30],["Prowler",30],["The Hood",30,["Parker Robbins"]]],
+  "mar-07": [["Utopia",30],["Genosha",10],["Muir Island",30],["Madripoor",30],["Wundagore Mountain",30],["The Xavier Institute",10,["X-Mansion","Xavier's School"]],["The Jean Grey School",30],["The Hellfire Club",30],["The Savage Land",30],["The Morlock Tunnels",30],["The Living Island",60,["Krakoa"]],["The Quiet Council",30],["The Green Lagoon",60],["Arak Coral",60],["The White Hot Room",60],["Otherworld",30],["Avalon",30],["The Vault",60]],
+  "dcc-01": [["Zatanna",30],["Green Arrow",10,["Oliver Queen"]],["Black Canary",10,["Dinah Lance"]],["Hawkman",30],["Hawkgirl",30],["The Atom",30,["Ray Palmer"]],["Firestorm",30],["Red Tornado",30],["Plastic Man",30],["The Question",30,["Vic Sage"]],["Mister Terrific",30],["Booster Gold",30],["Blue Beetle",30,["Ted Kord","Jaime Reyes"]],["Vixen",30,["Mari McCabe"]],["Doctor Fate",30],["Captain Atom",30],["Animal Man",60],["Metamorpho",30],["Black Lightning",30],["Power Girl",30],["Huntress",30],["The Spectre",60],["Orion",60],["Mister Miracle",60]],
+  "dcc-02": [["Rot Lop Fan",85],["Dkrtzy RRR",100],["B'dg",60],["Bzzd",85],["Ash",60],["Apros",60],["Chaselon",60],["Galius Zed",85],["Stel",60],["Vath Sarn",60],["Isamot Kol",60],["Soranik Natu",30],["Iolande",60],["Mogo",30],["Arisia Rrab",30],["Katma Tui",30],["Tomar-Tu",60],["Salaak",30],["Keli Quintela",30,["Teen Lantern"]],["Jo Mullein",30],["Simon Baz",10],["Jessica Cruz",10],["Jade",30,["Jennifer-Lynn Hayden"]],["Alan Scott",10],["Guy Gardner",10],["Kyle Rayner",10],["John Stewart",10],["Kilowog",10],["Sinestro",10],["Saint Walker",30],["Atrocitus",30],["Larfleeze",30],["Carol Ferris",30,["Star Sapphire"]],["Bleez",60],["Dex-Starr",30]],
+  "dcc-03": [["Batwing",30,["Luke Fox"]],["Bluebird",30,["Harper Row"]],["Orphan",30,["Cassandra Cain"]],["Spoiler",30,["Stephanie Brown"]],["The Signal",30,["Duke Thomas"]],["Flamebird",60],["Huntress",30,["Helena Bertinelli"]],["Batwoman",30,["Kate Kane"]],["Azrael",30,["Jean-Paul Valley"]],["Bat-Mite",60],["Bat-Cow",85],["Ace the Bat-Hound",60],["Gotham Girl",60],["Onyx",60],["Ghost-Maker",30],["Clownhunter",60],["Talon",30],["Julia Pennyworth",60],["Bette Kane",60]],
+  "dcc-04": [["Jesse Quick",30],["Max Mercury",30],["Johnny Quick",30],["XS",30,["Jenni Ognats"]],["Impulse",10,["Bart Allen"]],["Jesse Chambers",30],["The Rival",60],["Inertia",60],["Savitar",30],["Godspeed",30,["August Heart"]],["Black Flash",30],["Fast Track",60],["The Turtle",60],["Speed Demon",60],["Cobalt Blue",30],["Eobard Thawne",10,["Reverse-Flash"]],["Daniel West",60],["Avery Ho",30],["Wallace West",30]],
+  "dcc-05": [["Manchester Black",30],["Mongul",30],["Lobo",30],["Cyborg Superman",10,["Hank Henshaw"]],["Superboy-Prime",30],["Atomic Skull",30],["Livewire",30,["Leslie Willis"]],["Silver Banshee",30],["Toyman",30,["Winslow Schott"]],["The Prankster",60],["Ultra-Humanite",30],["Titano",30],["The Elite",30],["The Eradicator",30],["The Kryptonite Man",60]],
+  "dcc-06": [["The Anti-Life Equation",10],["The Omega Effect",30],["The Life Equation",60],["The Emotional Spectrum",30],["The Emotional Entities",30],["The Controllers",60],["The Zamarons",30],["The Guardians of Oa",10],["The Green Lantern Corps",10],["The Sinestro Corps",10],["The Red Lantern Corps",30],["The Orange Lantern Corps",30],["The Blue Lantern Corps",30],["The Indigo Tribe",30],["The Star Sapphires",30],["The Black Lantern Corps",30],["The White Lantern Corps",30],["The Ultraviolet Corps",60],["The Darkstars",30]],
+  "dcc-07": [["Red Robin",30,["Tim Drake"]],["Red Hood",30,["Jason Todd"]],["Blue Beetle",30,["Jaime Reyes"]],["Bumblebee",30,["Karen Beecher"]],["Ravager",30,["Rose Wilson"]],["Jericho",30,["Joseph Wilson"]],["Omen",30,["Lilith Clay"]],["Herald",30,["Mal Duncan"]],["Pantha",60],["Wildebeest",60],["Mammoth",30],["Jinx",30],["Psimon",30],["Brother Blood",30],["Trigon",10],["Blackfire",30,["Komand'r"]],["Terra",10,["Tara Markov"]],["Bunker",60],["Solstice",60],["Roundhouse",60],["Djinn",60],["Crush",60],["Kole",60],["Gnarrk",85]]
+};
+for (const [id, rows] of Object.entries(deepCuts)) banks[id].rows.push(...rows);
+
+const identityAliases: Record<string, string[]> = {
+  "doctor doom": ["Doom","Dr Doom","Dr. Doom","Victor von Doom","Victor Von Doom","Victor Doom","Doctor Victor von Doom"],
+  "peter parker": ["Spider-Man","Spiderman","Peter Benjamin Parker"],
+  "miles morales": ["Spider-Man","Spiderman","Miles Gonzalo Morales"],
+  "tony stark": ["Iron Man","Anthony Edward Stark"],
+  "steve rogers": ["Captain America","The First Avenger","Steven Rogers"],
+  "sam wilson": ["Falcon","Sam Wilson-Captain America"],
+  "natasha romanoff": ["Black Widow","Natalia Romanova"],
+  "clint barton": ["Hawkeye","Clinton Barton"],
+  "bruce banner": ["Hulk","Dr Bruce Banner","Robert Bruce Banner"],
+  "james rhodes": ["War Machine","Rhodey","James Rupert Rhodes"],
+  "t'challa": ["Black Panther","King of Wakanda"],
+  "thor": ["Thor Odinson","The God of Thunder"],
+  "jane foster": ["Mighty Thor","Dr Jane Foster"],
+  "scott lang": ["Ant-Man","Scott Edward Harris Lang"],
+  "hope van dyne": ["Wasp","Hope Pym"],
+  "wade wilson": ["Deadpool","The Merc with a Mouth"],
+  "logan": ["Wolverine","James Howlett","Weapon X"],
+  "james howlett": ["Wolverine","Logan"],
+  "charles xavier": ["Professor X","Professor Charles Xavier"],
+  "erik lehnsherr": ["Magneto","Max Eisenhardt"],
+  "max eisenhardt": ["Magneto","Erik Lehnsherr"],
+  "jean grey": ["Marvel Girl","Phoenix","Jean Elaine Grey"],
+  "ororo munroe": ["Storm"],
+  "scott summers": ["Cyclops"],
+  "kurt wagner": ["Nightcrawler"],
+  "hank mccoy": ["Beast"],
+  "anna marie": ["Rogue"],
+  "remy lebeau": ["Gambit"],
+  "pietro maximoff": ["Quicksilver"],
+  "wanda maximoff": ["Scarlet Witch"],
+  "matt murdock": ["Daredevil","The Man Without Fear"],
+  "frank castle": ["The Punisher"],
+  "jennifer walters": ["She-Hulk"],
+  "marc spector": ["Moon Knight"],
+  "stephen strange": ["Doctor Strange","Dr Strange"],
+  "carol danvers": ["Captain Marvel"],
+  "kamala khan": ["Ms Marvel","Ms. Marvel"],
+  "norman osborn": ["Green Goblin"],
+  "otto octavius": ["Doctor Octopus","Doc Ock"],
+  "eddie brock": ["Venom"],
+  "cletus kasady": ["Carnage"],
+  "wilson fisk": ["Kingpin"],
+  "harvey elder": ["Mole Man"],
+  "bentley wittman": ["The Wizard"],
+  "reed richards": ["Mister Fantastic","Mr Fantastic"],
+  "susan storm": ["Invisible Woman","Sue Storm"],
+  "ben grimm": ["The Thing","Benjamin Grimm"],
+  "johnny storm": ["Human Torch"],
+  "bruce wayne": ["Batman","The Dark Knight"],
+  "clark kent": ["Superman","Kal-El","Kal El"],
+  "diana prince": ["Wonder Woman","Diana of Themyscira"],
+  "barry allen": ["The Flash","Flash"],
+  "wally west": ["The Flash","Kid Flash"],
+  "arthur curry": ["Aquaman","Orin"],
+  "oliver queen": ["Green Arrow"],
+  "dinah lance": ["Black Canary"],
+  "selina kyle": ["Catwoman"],
+  "harvey dent": ["Two-Face","Two Face"],
+  "edward nygma": ["The Riddler","Riddler"],
+  "oswald cobblepot": ["The Penguin","Penguin"],
+  "pamela isley": ["Poison Ivy"],
+  "victor fries": ["Mr Freeze","Mister Freeze"],
+  "slade wilson": ["Deathstroke","The Terminator"],
+  "dick grayson": ["Nightwing","Robin","Richard Grayson"],
+  "jason todd": ["Red Hood","Robin"],
+  "tim drake": ["Red Robin","Robin"],
+  "damian wayne": ["Robin"],
+  "barbara gordon": ["Batgirl","Oracle"],
+  "kara zor-el": ["Supergirl","Kara Zor El"],
+  "billy batson": ["Shazam","Captain Marvel"],
+  "teth-adam": ["Black Adam","Teth Adam"],
+  "j'onn j'onzz": ["Martian Manhunter","Jonn Jonzz"],
+  "harleen quinzel": ["Harley Quinn","Dr Harleen Quinzel"],
+  "christopher smith": ["Peacemaker"],
+  "victor stone": ["Cyborg"],
+  "koriand'r": ["Starfire","Kori Anders"],
+  "garfield logan": ["Beast Boy","Changeling"],
+  "conner kent": ["Superboy"],
+  "cassie sandsmark": ["Wonder Girl"],
+  "jaime reyes": ["Blue Beetle"],
+  "hal jordan": ["Green Lantern"],
+  "john stewart": ["Green Lantern"],
+  "guy gardner": ["Green Lantern"],
+  "kyle rayner": ["Green Lantern"],
+  "jessica cruz": ["Green Lantern"],
+  "simon baz": ["Green Lantern"],
+  "alan scott": ["Green Lantern"],
+  "eobard thawne": ["Reverse-Flash","Professor Zoom"],
+  "august heart": ["Godspeed"],
+  "jenni ognats": ["XS"],
+  "bart allen": ["Impulse","Kid Flash"],
+  "jennifer-lynn hayden": ["Jade"],
+  "lucas bishop": ["Bishop"],
+  "laura kinney": ["X-23","Wolverine"],
+  "monet st. croix": ["M"],
+  "dani moonstar": ["Mirage"],
+  "sam guthrie": ["Cannonball"],
+  "doug ramsey": ["Cypher"],
+  "xi'an coy manh": ["Karma"],
+  "tandy bowen": ["Dagger"],
+  "tyrone johnson": ["Cloak"],
+  "maya lopez": ["Echo"],
+  "patsy walker": ["Hellcat"]
+};
+
 function clean(value: string) {
   return Array.from(value.toLowerCase().normalize("NFKD"))
     .filter((character) => {
@@ -115,6 +254,21 @@ function distance(a: string, b: string): number {
   return previous[b.length];
 }
 
+function allSpellings(option: AnswerOption): string[] {
+  const identities = identityAliases[clean(option.value)] || [];
+  return [...new Set([option.value, ...option.aliases, ...identities])];
+}
+
+export function resolveAnswer(question: Question, raw: string): AnswerOption | null {
+  const typed = clean(raw);
+  if (!typed) return null;
+  const canonical = question.answers.filter(option => clean(option.value) === typed);
+  if (canonical.length === 1) return canonical[0];
+  if (canonical.length > 1) return null;
+  const matches = question.answers.filter(option => allSpellings(option).some(spelling => clean(spelling) === typed));
+  return matches.length === 1 ? matches[0] : null;
+}
+
 export function findAnswerSuggestion(question: Question, raw: string): AnswerOption | null {
   const typed = clean(raw);
   if (typed.length < 4) return null;
@@ -122,7 +276,7 @@ export function findAnswerSuggestion(question: Question, raw: string): AnswerOpt
   let best: { option: AnswerOption; score: number } | null = null;
   let tied = false;
   for (const option of question.answers) {
-    for (const spelling of [option.value, ...option.aliases]) {
+    for (const spelling of allSpellings(option)) {
       const candidate = clean(spelling);
       if (!candidate || candidate === typed) continue;
       const score = distance(typed, candidate);
@@ -157,5 +311,14 @@ for (const questions of Object.values(questionSets)) {
         explanation: `${value} is a recognised answer connected to ${bank.topic}.`
       }));
     question.answers.push(...additions);
+    const canonicalKeys = new Set(question.answers.map(option => clean(option.value)));
+    for (const option of question.answers) {
+      const extra = identityAliases[clean(option.value)] || [];
+      const safeExtra = extra.filter(alias => {
+        const key = clean(alias);
+        return key !== clean(option.value) && !canonicalKeys.has(key);
+      });
+      option.aliases = [...new Set([...option.aliases, ...safeExtra])];
+    }
   }
 }
