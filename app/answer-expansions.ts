@@ -2,7 +2,7 @@ import { questionSets, type AnswerOption, type Question } from "./quiz-data";
 
 type Extra = [string, 10 | 30 | 60 | 85 | 100, string[]?];
 const banks: Record<string, { topic: string; rows: Extra[] }> = {
-  "mcu-01": { topic: "the Battle of New York and its MCU aftermath", rows: [
+  "mcu-01": { topic: "the Avengers and their MCU allies", rows: [
     ["Loki",10,["God of Mischief"]],["The Other",85],["Chitauri",30,["Chitauri soldiers"]],["Chitauri Leviathan",60,["Leviathan"]],["Thanos",60],["The World Security Council",60],["S.H.I.E.L.D.",10,["SHIELD"]],["Jasper Sitwell",85],["Gideon Malick",100],["Alexander Pierce",60],["The Avengers",10],["The Wasp",85,["Hope van Dyne"]],["Falcon",30,["Sam Wilson"]],["War Machine",30,["James Rhodes","Rhodey"]],["Sharon Carter",60],["Peggy Carter",60],["Happy Hogan",60],["The Ancient One",85],["Doctor Strange",30,["Stephen Strange"]],["Wong",60],["Rocket",30,["Rocket Raccoon"]],["Nebula",30],["Okoye",60],["Black Panther",30,["T'Challa"]],["Valkyrie",60]
   ]},
   "mcu-02": { topic: "Infinity Stones, their keepers and their MCU history", rows: [
@@ -11,8 +11,8 @@ const banks: Record<string, { topic: string; rows: Extra[] }> = {
   "mcu-03": { topic: "organisations and teams operating in the MCU", rows: [
     ["Avengers",10,["The Avengers"]],["S.H.I.E.L.D.",10,["SHIELD"]],["Hydra",10],["S.W.O.R.D.",30,["SWORD"]],["Damage Control",30],["Nova Corps",30],["Ravagers",30],["Guardians of the Galaxy",10],["Masters of the Mystic Arts",30],["Ten Rings",10],["Red Room",30],["Eternals",30],["Deviants",60],["Black Order",30],["Children of Thanos",30],["Thunderbolts",30],["Young Avengers",60],["Midnight Sons",85],["Illuminati",60],["Time Variance Authority",30,["TVA"]],["Strategic Homeland Intervention Enforcement and Logistics Division",85],["Department of Damage Control",60],[" Dora Milaje",30,["Dora Milaje"]],["War Dogs",60],["Ancestral Plane",100],["Hand",60],["Tracksuit Mafia",60],["Flag Smashers",60],["Extremis soldiers",85],["A.I.M.",60,["Advanced Idea Mechanics","AIM"]]
   ]},
-  "mcu-04": { topic: "characters who have lifted, wielded or used Mjolnir in the MCU", rows: [
-    ["Steve Rogers",10,["Captain America"]],["Thor",10],["Jane Foster",30,["Mighty Thor"]],["Vision",30],["Hela",60],["Odin",60],["Borr",85],["Beta Ray Bill",85],["Eric Masterson",100],["Throg",100],["Loki",60],["The Destroyer",85],["Gorr",60,["Gorr the God Butcher"]],[" Valkyrie",60,["Brunnhilde"]],["Heimdall",60],["Sif",60],["Hogun",85],["Fandral",85],["Volstagg",85],["Korg",60],["Miek",85],["The Warriors Three",60],["The Mighty Thor",30],["Thor Corps",100]
+  "mcu-04": { topic: "Asgardians and Thor allies in the MCU", rows: [
+    ["Loki",10,["God of Mischief"]],["Heimdall",10],["Sif",10],["Odin",10],["Frigga",30],["Hela",10],["Valkyrie",10,["Brunnhilde"]],["Korg",30],["The Warriors Three",30],["Hogun",60],["Fandral",60],["Volstagg",60],["Skurge",30],["Lady Sif",10],["Jane Foster",10,["Mighty Thor"]],["Thor",10],["Vision",30],["Steve Rogers",10,["Captain America"]],["Throg",60],["Gorr",30,["Gorr the God Butcher"]],["Eitri",60],["Beta Ray Bill",85]
   ]},
   "mcu-05": { topic: "places and realms visited or shown in the MCU", rows: [
     ["New York City",10,["New York"]],["Wakanda",10],["Asgard",10],["Midgard",30],["Vormir",30],["Knowhere",30],["Titan",30],["Morag",30],["Sakaar",30],["Xandar",30],["Nidavellir",30],["Jotunheim",60],["Svartalfheim",60],["Vanaheim",60],["Alfheim",85],["Muspelheim",60],["Niflheim",85],["Quantum Realm",10],["Mirror Dimension",30],["Dark Dimension",30],["Ta Lo",30],["Kamar-Taj",30],["Westview",30],["The Void",30],["New Asgard",30],["The Soul World",60],["Ego's Planet",30],["Counter-Earth",60],["Hala",30],["The Quantum Realm",10]
@@ -27,13 +27,13 @@ const banks: Record<string, { topic: string; rows: Extra[] }> = {
     ["Superman",10,["Clark Kent"]],["Batman",10,["Bruce Wayne"]],["Wonder Woman",10,["Diana Prince"]],["Aquaman",10,["Arthur Curry"]],["The Flash",10,["Barry Allen"]],["Cyborg",10,["Victor Stone"]],["Martha Kent",60],["Lois Lane",30],["Alfred Pennyworth",30],["Commissioner Gordon",30,["Jim Gordon"]],["Mera",30],["Steppenwolf",30],["Darkseid",30],["Desaad",85],["Jesse Quick",100],["Martian Manhunter",30,["J'onn J'onzz"]],["Green Lantern",60],["Silas Stone",60],["Iris West",30],["Black Canary",60],["Deathstroke",30],["Lex Luthor",10],["Joker",10],["Shazam",30,["Billy Batson"]],["Black Adam",30],["Peacemaker",30]
   ]},
   "dcm-02": { topic: "cities, planets and locations featured in DC films", rows: [
-    ["Gotham City",10,["Gotham"]],["Metropolis",10],["Themyscira",10],["Atlantis",10],["Kahndaq",30],["Central City",10],["Smallville",30],["Apokolips",30],["Krypton",10],["Oa",60],["Belle Reve",30],["Corto Maltese",30],["Fawcett City",60],["Jotunheim",60],["Nanda Parbat",60],["Kamar-Taj",100],["The Rock of Eternity",30],["Themysciran coast",85],["Blackgate Penitentiary",60],["Arkham Asylum",10],["Wayne Manor",10],["Hall of Justice",30],["Themyscira's hidden cove",85],["The Pit",60],["Stryker's Island",60]
+    ["Gotham City",10,["Gotham"]],["Metropolis",10],["Themyscira",10],["Atlantis",10],["Kahndaq",30],["Central City",10],["Smallville",30],["Apokolips",30],["Krypton",10],["Oa",60],["Belle Reve",30],["Corto Maltese",30],["Fawcett City",60],["Jotunheim",60],["Nanda Parbat",60],["The Rock of Eternity",30],["Themysciran coast",85],["Blackgate Penitentiary",60],["Arkham Asylum",10],["Wayne Manor",10],["Hall of Justice",30],["Themyscira's hidden cove",85],["The Pit",60],["Stryker's Island",60]
   ]},
   "dcm-03": { topic: "Batman allies, family and adversaries in DC films", rows: [
     ["Robin",10],["Dick Grayson",30],["Jason Todd",30],["Barbara Gordon",30],["Batgirl",10],["Batwoman",60],["Catwoman",10,["Selina Kyle"]],["The Riddler",10,["Edward Nygma"]],["The Penguin",10,["Oswald Cobblepot"]],["Two-Face",10,["Harvey Dent"]],["Scarecrow",10,["Jonathan Crane"]],["Bane",10],["Poison Ivy",30,["Pamela Isley"]],["Mr. Freeze",30,["Victor Fries"]],["Ra's al Ghul",30],["Talia al Ghul",30],["Hush",60,["Thomas Elliot"]],["Black Mask",30,["Roman Sionis"]],["Firefly",60,["Garfield Lynns"]],["Mad Hatter",60,["Jervis Tetch"]],["Killer Croc",30],["Victor Zsasz",30],["Carmine Falcone",30],["Sal Maroni",60],["The Court of Owls",60],["Alberto Falcone",85],["Sofia Falcone",85],["Calendar Man",85]
   ]},
   "dcm-04": { topic: "villains appearing in DC superhero films", rows: [
-    ["General Zod",10],["Doomsday",10],["Ares",10],["Cheetah",30],["Ocean Master",30,["Orm"]],["Black Manta",10,["David Kane"]],["Enchantress",10,["June Moone"]],["Starro",30],["Bloodsport",30,["Robert DuBois"]],["King Shark",30],["Polka-Dot Man",60],["Savant",60],["Javelin",60],["Weasel",60],["The Thinker",30,["Clifford DeVoe"]],["Reverse-Flash",30,["Eobard Thawne"]],["Zod",10],["Lex Luthor",10],["Joker",10],["Harley Quinn",10],["Black Adam",30],["Sabbac",60],["Doctor Sivana",30],["Mister Mind",85],["Ivo",85,["Professor Ivo"]],["The Riddler",10],["The Penguin",10],["Falcone",30],["The High Evolutionary",100]
+    ["General Zod",10],["Doomsday",10],["Ares",10],["Cheetah",30],["Ocean Master",30,["Orm"]],["Black Manta",10,["David Kane"]],["Enchantress",10,["June Moone"]],["Starro",30],["Bloodsport",30,["Robert DuBois"]],["King Shark",30],["Polka-Dot Man",60],["Savant",60],["Javelin",60],["Weasel",60],["The Thinker",30,["Clifford DeVoe"]],["Reverse-Flash",30,["Eobard Thawne"]],["Zod",10],["Lex Luthor",10],["Joker",10],["Harley Quinn",10],["Black Adam",30],["Sabbac",60],["Doctor Sivana",30],["Mister Mind",85],["Ivo",85,["Professor Ivo"]],["The Riddler",10],["The Penguin",10],["Falcone",30],
   ]},
   "dcm-05": { topic: "Task Force X, Suicide Squad and their film allies", rows: [
     ["Deadshot",10,["Floyd Lawton"]],["Captain Boomerang",10,["Digger Harkness"]],["Killer Croc",10],["Katana",10,["Tatsu Yamashiro"]],["Slipknot",30],["Rick Flag",10],["Amanda Waller",10],["June Moone",30],["Enchantress",30],["Bloodsport",10],["Peacemaker",10,["Christopher Smith"]],["Ratcatcher 2",30,["Cleo Cazo"]],["King Shark",10,["Nanaue"]],["Polka-Dot Man",30,["Abner Krill"]],["Savant",30],["Javelin",30],["Weasel",30],["Blackguard",60],["Mongal",60],["TDK",60],["The Thinker",30],["Milton",85],["Bronze Tiger",60],["Black Spider",60],["Duela Dent",85],["Harley Quinn",10],["The Joker",30],["Cheetah",60]
@@ -42,7 +42,7 @@ const banks: Record<string, { topic: string; rows: Extra[] }> = {
     ["Batman",10,["Bruce Wayne"]],["Superman",10,["Clark Kent"]],["Joker",10],["Lex Luthor",10],["Alfred Pennyworth",30],["Commissioner Gordon",30],["Wonder Woman",10],["Harley Quinn",10],["The Flash",10],["Aquaman",10],["Lois Lane",30],["Catwoman",30],["Zod",30,["General Zod"]],["Green Lantern",60],["Shazam",30],["Black Adam",30],["Deadshot",30],["Amanda Waller",10],["Peacemaker",30],["Deathstroke",60],["Robin",30],["Supergirl",30],["Cyborg",30],["Mera",30],["Joker's henchmen",85]
   ]},
   "dcm-07": { topic: "magic and supernatural characters from DC films", rows: [
-    ["Zatanna",60],["John Constantine",10,["Constantine"]],["Doctor Fate",10,["Kent Nelson"]],["Enchantress",10],["Incubus",60],["Etrigan",60],["The Demon",60],["Shazam",10,["Billy Batson"]],["Sabbac",30],["Mister Mind",60],["Black Adam",10,["Teth-Adam"]],["The Wizard",30],["Ares",10],["Circe",30],["Cheetah",30],["The Spectre",85],["Swamp Thing",60],["Deadman",85],["Raven",85],["Trigon",60],["Neron",100],["Felix Faust",85],["Madame Xanadu",100],["Klarion",100],["The Phantom Stranger",100]
+    ["Zatanna",60],["John Constantine",10,["Constantine"]],["Doctor Fate",10,["Kent Nelson"]],["Enchantress",10],["Incubus",60],["Etrigan",60],["The Demon",60],["Shazam",10,["Billy Batson"]],["Sabbac",30],["Mister Mind",60],["Black Adam",10,["Teth-Adam"]],["The Wizard",30],["Ares",10],["Circe",30],["Cheetah",30],["The Spectre",85],["Swamp Thing",60],["Deadman",85],["Raven",85],["Trigon",60],["Felix Faust",85],["The Phantom Stranger",100]
   ]},
   "mar-01": { topic: "X-Men members across Marvel Comics eras", rows: [
     ["Cyclops",10,["Scott Summers"]],["Jean Grey",10],["Storm",10,["Ororo Munroe"]],["Wolverine",10,["Logan","James Howlett"]],["Beast",10,["Hank McCoy"]],["Iceman",10,["Bobby Drake"]],["Angel",10,["Warren Worthington III"]],["Professor X",10,["Charles Xavier"]],["Jubilee",30],["Gambit",10,["Remy LeBeau"]],["Rogue",10],["Nightcrawler",10,["Kurt Wagner"]],["Colossus",10,["Piotr Rasputin"]],["Kitty Pryde",10,["Shadowcat","Katherine Pryde"]],["Psylocke",30,["Betsy Braddock"]],["Bishop",30,["Lucas Bishop"]],["Cable",30,["Nathan Summers"]],["Domino",30],["Forge",30],["Dazzler",30],["Longshot",60],["Multiple Man",30,["Jamie Madrox"]],["Polaris",30,["Lorna Dane"]],["Havok",30,["Alex Summers"]],["Banshee",30,["Sean Cassidy"]],["Sunfire",30],["Sunspot",30,["Roberto da Costa"]],["Cannonball",30,["Sam Guthrie"]],["Magik",30,["Illyana Rasputin"]],["Armor",60,["Hisako Ichiki"]],["Pixie",60,["Megan Gwynn"]],["Dust",60,["Sooraya Qadir"]],["X-23",30,["Laura Kinney"]],["Warpath",30,["James Proudstar"]],["Thunderbird",30,["John Proudstar"]],["Stepford Cuckoos",60],["Hope Summers",60],["Legion",60,["David Haller"]],["Mimic",85],["Blink",60],["Chamber",60],["Marrow",60],["M",60,["Monet St. Croix"]],["Frenzy",60],["Magma",60],["Cecilia Reyes",85],["Synch",60],["Prodigy",60],["Elixir",60],["Anole",60],["Rockslide",60]
@@ -89,7 +89,53 @@ const banks: Record<string, { topic: string; rows: Extra[] }> = {
 };
 
 function clean(value: string) {
-  return value.toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+  return Array.from(value.toLowerCase().normalize("NFKD"))
+    .filter((character) => {
+      const code = character.charCodeAt(0);
+      return code < 0x300 || code > 0x36f;
+    })
+    .join("")
+    .replace(/[^a-z0-9]/g, "");
+}
+
+function distance(a: string, b: string): number {
+  if (Math.abs(a.length - b.length) > 3) return 99;
+  let previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= a.length; i++) {
+    const current = [i];
+    for (let j = 1; j <= b.length; j++) {
+      current[j] = Math.min(
+        current[j - 1] + 1,
+        previous[j] + 1,
+        previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+    previous = current;
+  }
+  return previous[b.length];
+}
+
+export function findAnswerSuggestion(question: Question, raw: string): AnswerOption | null {
+  const typed = clean(raw);
+  if (typed.length < 4) return null;
+  const threshold = typed.length <= 6 ? 1 : typed.length <= 10 ? 2 : 3;
+  let best: { option: AnswerOption; score: number } | null = null;
+  let tied = false;
+  for (const option of question.answers) {
+    for (const spelling of [option.value, ...option.aliases]) {
+      const candidate = clean(spelling);
+      if (!candidate || candidate === typed) continue;
+      const score = distance(typed, candidate);
+      if (score > threshold) continue;
+      if (!best || score < best.score) {
+        best = { option, score };
+        tied = false;
+      } else if (score === best.score && option.value !== best.option.value) {
+        tied = true;
+      }
+    }
+  }
+  return best && !tied ? best.option : null;
 }
 const rarityFor = (points: Extra[1]): AnswerOption["points"] => points;
 for (const questions of Object.values(questionSets)) {
@@ -98,12 +144,17 @@ for (const questions of Object.values(questionSets)) {
     if (!bank) continue;
     const seen = new Set(question.answers.flatMap((a) => [a.value, ...a.aliases]).map(clean));
     const additions: AnswerOption[] = bank.rows
-      .filter(([name, , aliases = []]) => !seen.has(clean(name)) && !aliases.some((alias) => seen.has(clean(alias))))
+      .filter(([name, , aliases = []]) => {
+        const keys = [name, ...aliases].map(clean);
+        if (keys.some((key) => seen.has(key))) return false;
+        keys.forEach((key) => seen.add(key));
+        return true;
+      })
       .map(([value, points, aliases = []]) => ({
         value,
         aliases,
         points: rarityFor(points),
-        explanation: `${value} is associated with ${bank.topic}. Exact membership and appearances can vary by story era and continuity.`
+        explanation: `${value} is a recognised answer connected to ${bank.topic}.`
       }));
     question.answers.push(...additions);
   }
