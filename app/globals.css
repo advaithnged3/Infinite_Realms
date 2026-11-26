@@ -455,3 +455,14 @@
 .flow-realm-progress{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin:14px auto 0;padding:12px 18px;max-width:950px;border:1px solid rgba(235,197,112,.28);border-radius:12px;background:linear-gradient(90deg,rgba(235,197,112,.12),rgba(91,110,195,.09))}
 .flow-realm-progress span{font:8px 'DM Mono',monospace;letter-spacing:.12em;color:#c8b47f}.flow-realm-progress b{font:700 18px 'Barlow Condensed',sans-serif;color:#f4d58e}.flow-realm-progress small{font-size:11px;color:#aeb5c8}
 @media(max-width:760px){.ir-nav{grid-template-columns:auto 1fr auto;gap:10px;padding:0 12px}.ir-brand{justify-self:center;font-size:9px}.nav-center{display:none}.menu-trigger{padding:8px 10px}.menu-trigger small{display:none}.nav-clock small{font-size:6px}.nav-clock b{font-size:15px}.nav-pill{display:none}.ir-hero{min-height:auto;padding-top:45px;padding-bottom:55px}.hero-image-frame{max-height:420px}.options-drawer{padding:23px 18px}}
+
+
+.hero-image-frame .slide-1{animation:realmSlide6 48s infinite 0s}.hero-image-frame .slide-2{animation:realmSlide6 48s infinite 8s}.hero-image-frame .slide-3{animation:realmSlide6 48s infinite 16s}.hero-image-frame .slide-4{animation:realmSlide6 48s infinite 24s}.hero-image-frame .slide-5{animation:realmSlide6 48s infinite 32s}.hero-image-frame .slide-6{animation:realmSlide6 48s infinite 40s}
+@keyframes realmSlide6{0%,12%{opacity:.94;transform:scale(1)}16%,100%{opacity:0;transform:scale(1.12)}}
+.tile-art{font-family:'Barlow Condensed',sans-serif;font-weight:900;letter-spacing:-.06em;text-shadow:0 4px 20px rgba(0,0,0,.5)}
+.tile-1 .tile-art,.mode-choice:nth-of-type(2) .mode-symbol{color:#fff;background:#d92736;padding:5px 10px;border-radius:4px}
+.tile-2 .tile-art,.tile-4 .tile-art{display:grid;place-items:center;border:2px solid currentColor;border-radius:50%;width:58px;height:58px;font-style:italic;font-size:24px}
+.tile-3 .tile-art{color:#ed3444}
+.tile-4 .tile-art{color:#e8e8ff}
+.daily-set-picker{display:none!important}
+@media(prefers-reduced-motion:reduce){.hero-image-frame .multiverse-slide,.hero-image-frame:before,.starfield,.nebula{animation:none!important}.hero-image-frame .slide-1{opacity:1!important}}
