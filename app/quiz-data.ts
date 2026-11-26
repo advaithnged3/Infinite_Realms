@@ -13,7 +13,7 @@ const A=(rows:[string,10|30|60|85|100,string,string[]?][]):AnswerOption[]=>rows.
 const Q=(id:string,universe:Question["universe"],prompt:string,hint:string,visual:string,visualAlt:string,rows:[string,10|30|60|85|100,string,string[]?][]):Question=>({id,universe,prompt,hint,visual,visualAlt,answers:A(rows)});
 export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  mcu:[
- Q("mcu-01","mcu","Name an Avenger or a hero who has served on an Avengers roster in the MCU.","Earth's Mightiest Heroes assembled against the Chitauri.","avengers","The Battle of New York",[
+ Q("mcu-01","mcu","Name a hero, villain or supporting character from the Marvel Cinematic Universe.","Earth's Mightiest Heroes assembled against the Chitauri.","avengers","The Battle of New York",[
  ["Iron Man",10,"Tony Stark leads the aerial assault and carries the nuclear missile through the portal."],["Captain America",10,"Steve Rogers coordinates the team on the ground."],["Thor",10,"Thor battles the Chitauri and confronts Loki."],["Black Widow",30,"Natasha Romanoff closes the portal using the Tesseract device."],["Hawkeye",30,"Clint Barton fights from the rooftops with his bow."],["Hulk",30,"Bruce Banner transforms and defeats the Chitauri leviathan."],
  ["Maria Hill",60,"S.H.I.E.L.D. Deputy Director Maria Hill coordinates the response during the New York invasion."],
  ["Nick Fury",60,"Nick Fury directs the Avengers Initiative and oversees the response."],
