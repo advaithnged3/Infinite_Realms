@@ -32,7 +32,8 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Masters of the Mystic Arts",30,"The sorcerers protect Earth from mystical threats."],
  ["The Eternals",30,"The Eternals are an ancient group of engineered protectors."],
  ["The Flag Smashers",60,"The Flag Smashers emerge in the post-Blip world."],
- ["The Red Room",85,"The Red Room trains Black Widow operatives."]
+ ["The Red Room",85,"The Red Room trains Black Widow operatives."],
+ ["S.W.O.R.D.",100,"Sentient Weapon Observation and Response Division is an organisation introduced in WandaVision."]
  ]),
  Q("mcu-04","mcu","Name a character who has lifted or wielded Mjolnir in the MCU.","The enchanted hammer has judged more than one hero worthy.","mjolnir","The enchanted hammer Mjolnir",[
  ["Thor",10,"Thor is Mjolnir's traditional wielder."],["Steve Rogers",30,"Steve Rogers proves worthy and lifts Mjolnir in Endgame.",["Captain America"]],["Vision",60,"Vision lifts Mjolnir shortly after being created in Age of Ultron."],["Jane Foster",30,"Jane Foster becomes the Mighty Thor and wields Mjolnir in Love and Thunder.",["Mighty Thor"]],
@@ -68,14 +69,15 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ])
  ],
  "dc-movies":[
- Q("dcm-01","dc-movies","Name a hero who appears in a Justice League film.","The League has brought together heroes from very different worlds.","league","The Justice League assembles",[
+ Q("dcm-01","dc-movies","Name a character who appears in a Justice League film.","The League has brought together heroes from very different worlds.","league","The Justice League assembles",[
  ["Batman",10,"Bruce Wayne helps assemble the League.",["Bruce Wayne"]],["Superman",10,"Clark Kent returns to help the League defeat Steppenwolf.",["Clark Kent"]],["Wonder Woman",10,"Diana Prince is one of the League's founding members.",["Diana Prince"]],["Aquaman",10,"Arthur Curry joins the League to defend Earth.",["Arthur Curry"]],["The Flash",10,"Barry Allen brings super-speed to the team.",["Flash","Barry Allen"]],["Cyborg",30,"Victor Stone's connection to the Mother Boxes makes him essential.",["Victor Stone"]],["Martian Manhunter",85,"J'onn J'onzz appears in the Snyder Cut epilogue.",["J'onn J'onzz"]],
  ["Green Lantern",60,"A Green Lantern appears in the Snyder Cut epilogue."],
  ["Mera",30,"Mera fights alongside the heroes in the Snyder Cut's final battle."],
  ["Lois Lane",30,"Lois Lane is central to Superman's return and the League's story."],
  ["Commissioner Gordon",30,"James Gordon works with Batman and the League in Gotham."],
  ["Silas Stone",60,"Silas Stone's work with the Mother Box is crucial to Cyborg's story."],
- ["Ryan Choi",85,"Ryan Choi appears in the Snyder Cut epilogue as a S.T.A.R. Labs scientist."]
+ ["Ryan Choi",85,"Ryan Choi appears in the Snyder Cut epilogue as a S.T.A.R. Labs scientist."],
+ ["Steppenwolf",100,"Steppenwolf appears as the invading antagonist in Justice League; the prompt now includes characters, not only heroes."]
  ]),
  Q("dcm-02","dc-movies","Name a city or place featured in a DC superhero film.","Think of the heroes' home cities and key story locations.","dcplaces","Cities of the DC film worlds",[
  ["Gotham City",10,"Gotham is Batman's home and the setting of multiple DC films.",["Gotham"]],["Metropolis",10,"Metropolis is Superman's adopted home city."],["Themyscira",30,"Themyscira is Diana's Amazon homeland."],["Central City",30,"Central City is associated with Barry Allen in The Flash."],["Atlantis",10,"Atlantis is the underwater kingdom ruled by Arthur Curry."],["Apokolips",60,"Apokolips is Darkseid's homeworld."],["Kahndaq",60,"Kahndaq is the country at the centre of Black Adam."],["Belle Reve",85,"Belle Reve is the prison facility associated with the Suicide Squad."],
@@ -89,7 +91,8 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Alfred Pennyworth",10,"Alfred is Bruce Wayne's trusted confidant and caretaker."],["Commissioner Gordon",10,"James Gordon is one of Batman's most important allies."],["Robin",30,"Robin is Batman's young partner; a Robin suit appears in Batman v Superman."],["Catwoman",30,"Selina Kyle is a complex ally and adversary of Batman."],["Batgirl",60,"Barbara Gordon is a major Bat-family hero in DC film adaptations."],["Lucius Fox",60,"Lucius Fox supports Bruce with technology and resources."],["The Riddler",30,"The Riddler is an antagonist whose clues challenge Batman."],
  ["Harvey Dent",30,"Harvey Dent is Gotham's district attorney and a major figure in Batman films."],
  ["John Blake",60,"John Blake is a Gotham police officer and key ally in The Dark Knight Rises."],
- ["Talia al Ghul",85,"Talia is a major figure in The Dark Knight Rises and connected to Bruce Wayne."]
+ ["Talia al Ghul",85,"Talia is a major figure in The Dark Knight Rises and connected to Bruce Wayne."],
+ ["Ra's al Ghul",100,"Ra's al Ghul is a mentor and adversary who trains Bruce Wayne in Batman Begins."]
  ]),
  Q("dcm-04","dc-movies","Name a villain who has appeared in a DC superhero film.","From street-level masterminds to world-ending threats.","villains","DC's cinematic rogues",[
  ["Joker",10,"The Joker is Batman's infamous nemesis."],["Lex Luthor",10,"Lex Luthor is a recurring enemy of Superman."],["General Zod",10,"Zod is the Kryptonian antagonist of Man of Steel."],["Steppenwolf",30,"Steppenwolf leads the invasion in Justice League."],["Darkseid",30,"Darkseid is the ruler of Apokolips."],["Black Manta",30,"Black Manta seeks revenge against Aquaman."],["Cheetah",60,"Barbara Minerva becomes Cheetah in Wonder Woman 1984."],["Starro",60,"Starro is the enormous alien threat in The Suicide Squad."],["Doctor Sivana",85,"Doctor Sivana is the villain of Shazam!."],
@@ -98,16 +101,18 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Black Adam",30,"Black Adam is an antihero and antagonist in his solo film."],
  ["Ishmael Gregor",60,"Ishmael Gregor becomes Sabbac in Black Adam."],
  ["Sabbac",60,"Sabbac is the demonic threat in Black Adam."],
- ["The Enchantress",30,"June Moone becomes the Enchantress in Suicide Squad."]
+ ["The Enchantress",30,"June Moone becomes the Enchantress in Suicide Squad."],
+ ["Maxwell Lord",100,"Maxwell Lord is the antagonist of Wonder Woman 1984."]
  ]),
- Q("dcm-05","dc-movies","Name a member of the Suicide Squad in the films.","The roster is deliberately unpredictable.","squad","Task Force X",[
+ Q("dcm-05","dc-movies","Name a member or key operator of Task Force X in the films.","The roster is deliberately unpredictable.","squad","Task Force X",[
  ["Harley Quinn",10,"Harley Quinn is a central member of the cinematic squad."],["Deadshot",10,"Floyd Lawton is a skilled marksman in Suicide Squad."],["Bloodsport",30,"Bloodsport leads the team in The Suicide Squad."],["Peacemaker",30,"Peacemaker is part of the Corto Maltese mission."],["King Shark",10,"King Shark is the team's powerful, surprisingly gentle member."],["Ratcatcher 2",60,"Cleo Cazo is able to control rats."],["Polka-Dot Man",60,"Abner Krill weaponises multicoloured polka-dot energy."],["Rick Flag",10,"Rick Flag commands Task Force X."],["Captain Boomerang",30,"George Harkness is a returning squad member."],
  ["Savant",60,"Savant is part of the team sent to Corto Maltese."],
  ["Javelin",60,"Javelin is a member of the opening squad in The Suicide Squad."],
  ["Blackguard",60,"Blackguard is part of the squad's ill-fated first wave."],
  ["Mongal",60,"Mongal joins the first wave of the Corto Maltese mission."],
  ["Weasel",30,"Weasel is included in the squad's deployment."],
- ["T.D.K.",85,"The Detachable Kid is part of the opening team."]
+ ["T.D.K.",85,"The Detachable Kid is part of the opening team."],
+ ["Amanda Waller",100,"Amanda Waller creates and oversees Task Force X in the Suicide Squad films."]
  ]),
  Q("dcm-06","dc-movies","Name a character who has appeared in more than one DC film continuity or era.","Consider heroes, villains and recurring supporting characters.","crossovers","DC film legacies",[
  ["Batman",10,"Batman has appeared across multiple cinematic eras."],["Superman",10,"Superman has been portrayed across multiple film continuities."],["Joker",10,"The Joker has appeared in several distinct film interpretations."],["Wonder Woman",30,"Diana appears across multiple films in the DCEU."],["Aquaman",30,"Arthur Curry appears in Justice League and solo films."],["Lex Luthor",60,"Lex Luthor has been reimagined in multiple film eras."],["Alfred Pennyworth",30,"Alfred appears across several Batman film series."],
@@ -118,7 +123,8 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Riddler",60,"The Riddler appears in more than one Batman film era."],
  ["Two-Face",60,"Two-Face appears in multiple Batman films."],
  ["Bane",60,"Bane appears in more than one cinematic Batman continuity."],
- ["The Scarecrow",85,"Jonathan Crane appears in Christopher Nolan's Batman trilogy."]
+ ["The Scarecrow",85,"Jonathan Crane appears in Christopher Nolan's Batman trilogy."],
+ ["Ra's al Ghul",100,"Ra's al Ghul is a recurring Batman adversary across major film adaptations."]
  ]),
  Q("dcm-07","dc-movies","Name a magical or supernatural character from a DC film.","Not every DC hero relies on gadgets or super-strength.","magic","The supernatural side of DC films",[
  ["Shazam",10,"Billy Batson transforms through a magical word."],["Black Adam",10,"Teth-Adam's powers originate from ancient magic."],["Doctor Fate",30,"Kent Nelson wields the power of the Lords of Order."],["Enchantress",30,"June Moone becomes the supernatural Enchantress."],["Zatanna",60,"Zatanna is a powerful stage magician and sorceress in DC stories."],["Constantine",60,"John Constantine is an occult detective in DC adaptations."],["Etrigan",100,"Etrigan is a demon bound to Jason Blood in DC lore."],
@@ -206,7 +212,8 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Krakoa",10,"Krakoa becomes a sovereign mutant homeland in the modern X-Men era."],["Genosha",10,"Genosha is a nation whose history is tied to mutant oppression."],["Utopia",30,"Utopia is an island base for mutants off the coast of San Francisco."],["Muir Island",30,"Muir Island has hosted important mutant research and refuge."],["Arakko",60,"Arakko is an ancient mutant land connected to Amenth."],["Asteroid M",60,"Asteroid M has served as a mutant base under Magneto."],["The Savage Land",85,"The Savage Land has been a refuge and battleground for mutants."],["Limbo",85,"Limbo is a mystical dimension ruled by beings including Magik."],
  ["Akkaba",60,"Akkaba is a community associated with Apocalypse."],
  ["Island M",60,"Island M has served as a base for Magneto."],
- ["The Krakoan nation",10,"Krakoa is the sovereign mutant nation."]
+ ["The Krakoan nation",10,"Krakoa is the sovereign mutant nation."],
+ ["The Morlock Tunnels",100,"The tunnels beneath New York are the hidden community and refuge of the Morlocks."]
  ])
  ],
  "dc-comics":[
