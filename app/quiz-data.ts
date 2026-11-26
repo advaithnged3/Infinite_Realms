@@ -13,7 +13,7 @@ const A=(rows:[string,10|30|60|85|100,string,string[]?][]):AnswerOption[]=>rows.
 const Q=(id:string,universe:Question["universe"],prompt:string,hint:string,visual:string,visualAlt:string,rows:[string,10|30|60|85|100,string,string[]?][]):Question=>({id,universe,prompt,hint,visual,visualAlt,answers:A(rows)});
 export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  mcu:[
- Q("mcu-01","mcu","Name an Avenger who fought in the Battle of New York.","Earth's Mightiest Heroes assembled against the Chitauri.","avengers","The Battle of New York",[
+ Q("mcu-01","mcu","Name a character involved in the Battle of New York.","Earth's Mightiest Heroes assembled against the Chitauri.","avengers","The Battle of New York",[
  ["Iron Man",10,"Tony Stark leads the aerial assault and carries the nuclear missile through the portal."],["Captain America",10,"Steve Rogers coordinates the team on the ground."],["Thor",10,"Thor battles the Chitauri and confronts Loki."],["Black Widow",30,"Natasha Romanoff closes the portal using the Tesseract device."],["Hawkeye",30,"Clint Barton fights from the rooftops with his bow."],["Hulk",30,"Bruce Banner transforms and defeats the Chitauri leviathan."],
  ["Maria Hill",60,"S.H.I.E.L.D. Deputy Director Maria Hill coordinates the response during the New York invasion."],
  ["Nick Fury",60,"Nick Fury directs the Avengers Initiative and oversees the response."],
@@ -53,7 +53,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Citadel at the End of Time",85,"The Citadel is where He Who Remains resides beyond the Sacred Timeline."],
  ["The Dark Dimension",100,"The Dark Dimension is ruled by Dormammu and appears in Doctor Strange."]
  ]),
- Q("mcu-06","mcu","Name a character who has been part of the Guardians of the Galaxy.","The roster has changed across the films.","guardians","The Guardians' changing roster",[
+ Q("mcu-06","mcu","Name a character from the Guardians of the Galaxy or their extended Ravager circle.","The roster has changed across the films.","guardians","The Guardians' changing roster",[
  ["Star-Lord",10,"Peter Quill is the team's founding leader.",["Peter Quill"]],["Gamora",10,"Gamora is a key member of the original team."],["Drax",10,"Drax joins the Guardians after seeking revenge on Ronan."],["Rocket",10,"Rocket is the team's sharp-tongued marksman and engineer."],["Groot",10,"Groot is the tree-like Guardian whose sacrifice saves the team."],["Nebula",30,"Nebula eventually joins the Guardians after reconciling with Gamora."],["Mantis",30,"Mantis joins the team after leaving Ego."],["Kraglin",60,"Kraglin becomes part of the expanded team after Yondu's death."],["Cosmo",85,"Cosmo the Spacedog joins the Guardians' later roster."],["Adam Warlock",85,"Adam Warlock joins the new Guardians team at the end of Vol. 3."],
  ["Phyla",60,"Phyla joins the new Guardians roster shown at the end of Vol. 3."],
  ["Kraglin Obfonteri",60,"Kraglin becomes part of the expanded Guardians team."],
@@ -85,9 +85,9 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Corto Maltese",30,"Corto Maltese is the island nation targeted in The Suicide Squad."],
  ["Krypton",10,"Krypton is Superman's destroyed homeworld."],
  ["Belle Reve Penitentiary",85,"Belle Reve is the prison facility associated with Task Force X."],
- ["Nanda Parbat",100,"Nanda Parbat is a hidden DC location referenced in the wider film-connected world."]
+ ["The Rock of Eternity",100,"The Rock of Eternity is the Wizard’s mystical lair in Shazam!."]
  ]),
- Q("dcm-03","dc-movies","Name a member of the Bat-family or an ally of Batman shown in DC films.","Gotham's protector rarely works entirely alone.","batfamily","The Bat-family",[
+ Q("dcm-03","dc-movies","Name a member, ally or adversary of Batman shown in DC films.","Gotham's protector rarely works entirely alone.","batfamily","The Bat-family",[
  ["Alfred Pennyworth",10,"Alfred is Bruce Wayne's trusted confidant and caretaker."],["Commissioner Gordon",10,"James Gordon is one of Batman's most important allies."],["Robin",30,"Robin is Batman's young partner; a Robin suit appears in Batman v Superman."],["Catwoman",30,"Selina Kyle is a complex ally and adversary of Batman."],["Batgirl",60,"Barbara Gordon is a major Bat-family hero in DC film adaptations."],["Lucius Fox",60,"Lucius Fox supports Bruce with technology and resources."],["The Riddler",30,"The Riddler is an antagonist whose clues challenge Batman."],
  ["Harvey Dent",30,"Harvey Dent is Gotham's district attorney and a major figure in Batman films."],
  ["John Blake",60,"John Blake is a Gotham police officer and key ally in The Dark Knight Rises."],
@@ -118,7 +118,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Batman",10,"Batman has appeared across multiple cinematic eras."],["Superman",10,"Superman has been portrayed across multiple film continuities."],["Joker",10,"The Joker has appeared in several distinct film interpretations."],["Wonder Woman",30,"Diana appears across multiple films in the DCEU."],["Aquaman",30,"Arthur Curry appears in Justice League and solo films."],["Lex Luthor",60,"Lex Luthor has been reimagined in multiple film eras."],["Alfred Pennyworth",30,"Alfred appears across several Batman film series."],
  ["Commissioner Gordon",30,"Gordon appears across several Batman film continuities."],
  ["Harvey Dent",30,"Harvey Dent appears in multiple Batman film interpretations."],
- ["Catwoman",30,"Catwoman appears in several distinct Batman film eras."],
+ ["Catwoman",100,"Catwoman appears in several distinct Batman film eras."],
  ["The Penguin",30,"The Penguin has been portrayed in multiple Batman film continuities."],
  ["Riddler",60,"The Riddler appears in more than one Batman film era."],
  ["Two-Face",60,"Two-Face appears in multiple Batman films."],
@@ -127,7 +127,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Ra's al Ghul",100,"Ra's al Ghul is a recurring Batman adversary across major film adaptations."]
  ]),
  Q("dcm-07","dc-movies","Name a magical or supernatural character from a DC film.","Not every DC hero relies on gadgets or super-strength.","magic","The supernatural side of DC films",[
- ["Shazam",10,"Billy Batson transforms through a magical word."],["Black Adam",10,"Teth-Adam's powers originate from ancient magic."],["Doctor Fate",30,"Kent Nelson wields the power of the Lords of Order."],["Enchantress",30,"June Moone becomes the supernatural Enchantress."],["Zatanna",60,"Zatanna is a powerful stage magician and sorceress in DC stories."],["Constantine",60,"John Constantine is an occult detective in DC adaptations."],["Etrigan",100,"Etrigan is a demon bound to Jason Blood in DC lore."],
+ ["Shazam",10,"Billy Batson transforms through a magical word."],["Black Adam",10,"Teth-Adam's powers originate from ancient magic."],["Doctor Fate",30,"Kent Nelson wields the power of the Lords of Order."],["Enchantress",30,"June Moone becomes the supernatural Enchantress."],["Zatanna",60,"Zatanna is a powerful stage magician and sorceress in DC stories."],["Constantine",60,"John Constantine is an occult detective in DC adaptations."],["The Wizard",100,"The Wizard is the ancient sorcerer who grants Billy Batson his powers in Shazam!."],
  ["The Wizard",30,"The Wizard grants Billy Batson his powers in Shazam!."],
  ["Sabbac",30,"Sabbac is a demonic supernatural antagonist in Black Adam."]
  ])
@@ -149,7 +149,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Longshot",85,"Longshot is an extradimensional hero who joins the X-Men."],
  ["X-23",60,"Laura Kinney is a clone of Wolverine and a member of the X-Men."],
  ["Hope Summers",85,"Hope is a mutant central to the post-Decimation era."],
- ["Legion",100,"David Haller is a mutant with vast reality-warping abilities and has been associated with the X-Men."]
+ ["Namor",100,"Namor has been a member of the X-Men and brings his Atlantean powers to the team."]
  ]),
  Q("mar-02","marvel-comics","Name a villain who has fought Spider-Man.","New York's web-slinger has one of comics' deepest rogues galleries.","spidey","Spider-Man's rogues gallery",[
  ["Green Goblin",10,"Norman Osborn is one of Spider-Man's defining enemies."],["Doctor Octopus",10,"Otto Octavius is a brilliant scientist with mechanical arms."],["Venom",10,"Venom is an alien symbiote bonded to hosts including Eddie Brock."],["Sandman",30,"Flint Marko can transform his body into sand."],["Mysterio",30,"Quentin Beck uses illusion and technology."],["Kraven the Hunter",30,"Kraven sees Spider-Man as the ultimate prey."],["The Vulture",30,"Adrian Toomes uses a flight harness."],["Tombstone",60,"Tombstone is a formidable crime boss with enhanced durability."],["The Jackal",85,"Miles Warren is the geneticist known as the Jackal."],["Morbius",60,"Michael Morbius is a living vampire who has clashed with Spider-Man."],
@@ -194,7 +194,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Alicia Masters",30,"Alicia Masters is Ben Grimm's longtime partner and close ally."],
  ["Agatha Harkness",85,"Agatha has served as a mentor to Franklin Richards."],
  ["Dragon Man",60,"Dragon Man has been an adversary and later ally of the Fantastic Four."],
- ["Impossible Man",100,"The Impossible Man has repeatedly interacted with and challenged the Fantastic Four."]
+ ["Franklin Richards",100,"Franklin is Reed and Sue’s son and an essential member of the extended Fantastic Four family."]
  ]),
  Q("mar-06","marvel-comics","Name a street-level Marvel hero.","Not every hero saves the universe; some protect a neighbourhood.","street","Marvel's street-level defenders",[
  ["Daredevil",10,"Matt Murdock protects Hell's Kitchen."],["Luke Cage",10,"Luke Cage is a super-strong hero from Harlem."],["Jessica Jones",30,"Jessica Jones is a private investigator with superhuman strength."],["Iron Fist",30,"Danny Rand channels the power of the Iron Fist."],["Moon Knight",30,"Marc Spector is the vigilante avatar of Khonshu."],["Misty Knight",60,"Misty Knight is a detective and martial artist with a bionic arm."],["Cloak",60,"Cloak can access the Darkforce Dimension."],["Dagger",60,"Dagger generates light daggers."],["Punisher",30,"Frank Castle is a lethal vigilante who wages a one-man war on crime.",["Frank Castle"]],
@@ -241,7 +241,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["G'nort",60,"G'nort is a comedic but genuine Green Lantern."],
  ["Stel",85,"Stel is a robotic Green Lantern from Sector 3009."],
  ["Rot Lop Fan",85,"Rot Lop Fan is a Green Lantern who perceives sound rather than light."],
- ["Keli Quintela",100,"Keli Quintela is Teen Lantern, who uses a gauntlet with Lantern technology."]
+ 
  ]),
  Q("dcc-03","dc-comics","Name a member of the Bat-family.","Gotham's network includes partners, protégés and allies.","batfamily","The Bat-family",[
  ["Nightwing",10,"Dick Grayson becomes Nightwing after leaving the Robin identity."],["Robin",10,"Several heroes have carried the Robin mantle."],["Batgirl",10,"Barbara Gordon is one of the best-known Batgirls."],["Alfred Pennyworth",10,"Alfred is Bruce Wayne's loyal confidant."],["Red Hood",30,"Jason Todd returns as the antihero Red Hood."],["Red Robin",30,"Tim Drake takes on the Red Robin identity."],["Batwoman",30,"Kate Kane is a Gotham vigilante and Bat-family ally."],["Spoiler",60,"Stephanie Brown operates as Spoiler and has also been Robin."],["Orphan",60,"Cassandra Cain becomes the vigilante Orphan."],["The Signal",85,"Duke Thomas protects Gotham as the Signal."],
@@ -278,7 +278,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Ultra-Humanite",85,"Ultra-Humanite is an early supervillain who has battled Superman."],
  ["Mister Mxyzptlk",100,"Mister Mxyzptlk is an imp from the Fifth Dimension who repeatedly challenges Superman."]
  ]),
- Q("dcc-06","dc-comics","Name a cosmic or New Gods character from DC Comics.","The Fourth World and DC's cosmic realms are full of powerful figures.","newgods","The New Gods and cosmic DC",[
+ Q("dcc-06","dc-comics","Name a cosmic character, force or New Gods figure from DC Comics.","The Fourth World and DC's cosmic realms are full of powerful figures.","newgods","The New Gods and cosmic DC",[
  ["Darkseid",10,"Darkseid rules Apokolips and seeks the Anti-Life Equation."],["Highfather",30,"Highfather leads New Genesis."],["Orion",30,"Orion is the warrior son of Darkseid raised on New Genesis."],["Mister Miracle",30,"Scott Free is the master escape artist of the New Gods."],["Big Barda",30,"Big Barda is a powerful New God and former Female Fury."],["Metron",60,"Metron travels the cosmos in the Mobius Chair."],["Lightray",60,"Lightray is a heroic New God of New Genesis."],["The Anti-Monitor",30,"The Anti-Monitor threatens the multiverse in Crisis on Infinite Earths."],["Perpetua",85,"Perpetua is a creator figure tied to the multiverse's origin."],["The Great Darkness",100,"The Great Darkness is an ancient primordial force in DC cosmology."],
  ["Granny Goodness",30,"Granny Goodness trains the forces of Apokolips."],
  ["Kalibak",30,"Kalibak is Darkseid's brutal son."],
