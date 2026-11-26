@@ -20,11 +20,11 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Erik Selvig",85,"Selvig is manipulated by Loki into operating the portal device."],
  ["Agent Phil Coulson",100,"Coulson is a S.H.I.E.L.D. agent whose actions directly shape the Avengers' response."]
  ]),
- Q("mcu-02","mcu","Name an Infinity Stone or a character who has held, guarded or sought one in the MCU.","There are six, each with a distinct colour and power.","stones","The six Infinity Stones",[
+ Q("mcu-02","mcu","Name an Infinity Stone, an artefact containing one, or a character connected to the Stones in the MCU.","There are six, each with a distinct colour and power.","stones","The six Infinity Stones",[
  ["Space Stone",10,"The blue Space Stone is housed in the Tesseract."],["Mind Stone",10,"The yellow Mind Stone is first seen in Loki's sceptre."],["Time Stone",10,"The green Time Stone is protected in the Eye of Agamotto."],["Power Stone",10,"The purple Power Stone is hidden inside the Orb."],["Reality Stone",30,"The red Reality Stone takes the form of the Aether."],["Soul Stone",100,"The orange Soul Stone is hidden on Vormir."],
  ["Thanos",85,"Thanos is the central figure seeking to collect all six Stones."],
  ["The Collector",85,"Taneleer Tivan keeps the Reality Stone and studies cosmic artefacts."],["Red Skull",60,"Red Skull guards the Soul Stone on Vormir."],["Ronan the Accuser",30,"Ronan obtains the Orb containing the Power Stone."],["Loki",30,"Loki wields the sceptre containing the Mind Stone."],["Tony Stark",60,"Tony Stark uses the completed Infinity Gauntlet in Endgame."],["Bruce Banner",60,"Bruce Banner uses the Gauntlet to reverse the Blip."],["Star-Lord",30,"Peter Quill briefly touches the Power Stone on Morag."],["Gamora",30,"Gamora seeks the Soul Stone and discovers its location."],["Jane Foster",85,"Jane Foster is briefly entrusted with the Reality Stone as the Aether."]]),
- Q("mcu-03","mcu","Name an organisation or team that operates in the MCU.","Think agencies, secret groups, alien crews and superhero teams.","factions","The many factions of the MCU",[
+ Q("mcu-03","mcu","Name an organisation, team, faction or agency in the MCU.","Think agencies, secret groups, alien crews and superhero teams.","factions","The many factions of the MCU",[
  ["S.H.I.E.L.D.",10,"S.H.I.E.L.D. is the intelligence agency led by Nick Fury.",["SHIELD"]],["HYDRA",10,"HYDRA is the clandestine organisation that infiltrates S.H.I.E.L.D."],["The Avengers",10,"The Avengers are Earth's principal superhero team."],["The Guardians of the Galaxy",30,"The Guardians are a band of cosmic misfits who protect the galaxy.",["Guardians"]],["The TVA",30,"The Time Variance Authority monitors branching timelines."],["The Ravagers",60,"The Ravagers are spacefaring crews led by figures such as Yondu."],["Nova Corps",85,"The Nova Corps is the interstellar peacekeeping force based on Xandar."],["The Dora Milaje",60,"The Dora Milaje are Wakanda's elite royal guard."],
  ["Damage Control",30,"The Department of Damage Control handles superhuman-related incidents."],
  ["The Ten Rings",30,"The Ten Rings is an ancient organisation led in the modern era by Wenwu."],
@@ -52,7 +52,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Citadel at the End of Time",85,"The Citadel is where He Who Remains resides beyond the Sacred Timeline."],
  ["The Dark Dimension",100,"The Dark Dimension is ruled by Dormammu and appears in Doctor Strange."]
  ]),
- Q("mcu-06","mcu","Name a character from the Guardians of the Galaxy or their extended Ravager circle.","The roster has changed across the films.","guardians","The Guardians' changing roster",[
+ Q("mcu-06","mcu","Name a character from the Guardians of the Galaxy films, including allies, enemies and Ravager connections.","The roster has changed across the films.","guardians","The Guardians' changing roster",[
  ["Star-Lord",10,"Peter Quill is the team's founding leader.",["Peter Quill"]],["Gamora",10,"Gamora is a key member of the original team."],["Drax",10,"Drax joins the Guardians after seeking revenge on Ronan."],["Rocket",10,"Rocket is the team's sharp-tongued marksman and engineer."],["Groot",10,"Groot is the tree-like Guardian whose sacrifice saves the team."],["Nebula",30,"Nebula eventually joins the Guardians after reconciling with Gamora."],["Mantis",30,"Mantis joins the team after leaving Ego."],["Kraglin",60,"Kraglin becomes part of the expanded team after Yondu's death."],["Cosmo",85,"Cosmo the Spacedog joins the Guardians' later roster."],["Adam Warlock",85,"Adam Warlock joins the new Guardians team at the end of Vol. 3."],
  ["Phyla",60,"Phyla joins the new Guardians roster shown at the end of Vol. 3."],
  ["Kraglin Obfonteri",60,"Kraglin becomes part of the expanded Guardians team."],
@@ -86,7 +86,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Belle Reve Penitentiary",85,"Belle Reve is the prison facility associated with Task Force X."],
  ["The Rock of Eternity",100,"The Rock of Eternity is the Wizard’s mystical lair in Shazam!."]
  ]),
- Q("dcm-03","dc-movies","Name a member, ally or adversary of Batman shown in DC films.","Gotham's protector rarely works entirely alone.","batfamily","The Bat-family",[
+ Q("dcm-03","dc-movies","Name a member, ally or adversary of Batman from DC films, including animated films.","Gotham's protector rarely works entirely alone.","batfamily","The Bat-family",[
  ["Alfred Pennyworth",10,"Alfred is Bruce Wayne's trusted confidant and caretaker."],["Commissioner Gordon",10,"James Gordon is one of Batman's most important allies."],["Robin",30,"Robin is Batman's young partner; a Robin suit appears in Batman v Superman."],["Catwoman",30,"Selina Kyle is a complex ally and adversary of Batman."],["Batgirl",60,"Barbara Gordon is a major Bat-family hero in DC film adaptations."],["Lucius Fox",60,"Lucius Fox supports Bruce with technology and resources."],["The Riddler",30,"The Riddler is an antagonist whose clues challenge Batman."],
  ["Harvey Dent",30,"Harvey Dent is Gotham's district attorney and a major figure in Batman films."],
  ["John Blake",60,"John Blake is a Gotham police officer and key ally in The Dark Knight Rises."],
@@ -103,7 +103,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Enchantress",30,"June Moone becomes the Enchantress in Suicide Squad."],
  ["Maxwell Lord",100,"Maxwell Lord is the antagonist of Wonder Woman 1984."]
  ]),
- Q("dcm-05","dc-movies","Name a member or key operator of Task Force X in the films.","The roster is deliberately unpredictable.","squad","Task Force X",[
+ Q("dcm-05","dc-movies","Name a character from a Suicide Squad or Task Force X film, including team members, handlers and opponents.","The roster is deliberately unpredictable.","squad","Task Force X",[
  ["Harley Quinn",10,"Harley Quinn is a central member of the cinematic squad."],["Deadshot",10,"Floyd Lawton is a skilled marksman in Suicide Squad."],["Bloodsport",30,"Bloodsport leads the team in The Suicide Squad."],["Peacemaker",30,"Peacemaker is part of the Corto Maltese mission."],["King Shark",10,"King Shark is the team's powerful, surprisingly gentle member."],["Ratcatcher 2",60,"Cleo Cazo is able to control rats."],["Polka-Dot Man",60,"Abner Krill weaponises multicoloured polka-dot energy."],["Rick Flag",10,"Rick Flag commands Task Force X."],["Captain Boomerang",30,"George Harkness is a returning squad member."],
  ["Savant",60,"Savant is part of the team sent to Corto Maltese."],
  ["Javelin",60,"Javelin is a member of the opening squad in The Suicide Squad."],
@@ -113,7 +113,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["T.D.K.",85,"The Detachable Kid is part of the opening team."],
  ["Amanda Waller",100,"Amanda Waller creates and oversees Task Force X in the Suicide Squad films."]
  ]),
- Q("dcm-06","dc-movies","Name a character who has appeared in more than one DC film continuity or era.","Consider heroes, villains and recurring supporting characters.","crossovers","DC film legacies",[
+ Q("dcm-06","dc-movies","Name a DC character who has appeared in live-action or animated films.","Consider heroes, villains and recurring supporting characters.","crossovers","DC film legacies",[
  ["Batman",10,"Batman has appeared across multiple cinematic eras."],["Superman",10,"Superman has been portrayed across multiple film continuities."],["Joker",10,"The Joker has appeared in several distinct film interpretations."],["Wonder Woman",30,"Diana appears across multiple films in the DCEU."],["Aquaman",30,"Arthur Curry appears in Justice League and solo films."],["Lex Luthor",60,"Lex Luthor has been reimagined in multiple film eras."],["Alfred Pennyworth",30,"Alfred appears across several Batman film series."],
  ["Commissioner Gordon",30,"Gordon appears across several Batman film continuities."],
  ["Harvey Dent",30,"Harvey Dent appears in multiple Batman film interpretations."],
@@ -150,7 +150,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Hope Summers",85,"Hope is a mutant central to the post-Decimation era."],
  ["Namor",100,"Namor has been a member of the X-Men and brings his Atlantean powers to the team."]
  ]),
- Q("mar-02","marvel-comics","Name a villain who has fought Spider-Man.","New York's web-slinger has one of comics' deepest rogues galleries.","spidey","Spider-Man's rogues gallery",[
+ Q("mar-02","marvel-comics","Name a villain or recurring adversary who has fought Spider-Man.","New York's web-slinger has one of comics' deepest rogues galleries.","spidey","Spider-Man's rogues gallery",[
  ["Green Goblin",10,"Norman Osborn is one of Spider-Man's defining enemies."],["Doctor Octopus",10,"Otto Octavius is a brilliant scientist with mechanical arms."],["Venom",10,"Venom is an alien symbiote bonded to hosts including Eddie Brock."],["Sandman",30,"Flint Marko can transform his body into sand."],["Mysterio",30,"Quentin Beck uses illusion and technology."],["Kraven the Hunter",30,"Kraven sees Spider-Man as the ultimate prey."],["The Vulture",30,"Adrian Toomes uses a flight harness."],["Tombstone",60,"Tombstone is a formidable crime boss with enhanced durability."],["The Jackal",85,"Miles Warren is the geneticist known as the Jackal."],["Morbius",60,"Michael Morbius is a living vampire who has clashed with Spider-Man."],
  ["Electro",10,"Max Dillon manipulates electricity and is a classic Spider-Man foe."],
  ["Rhino",10,"Aleksei Sytsevich uses a powerful armoured suit."],
@@ -164,7 +164,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Overdrive",85,"Overdrive is a technology-enhanced criminal who clashes with Spider-Man."],
  ["The Sin-Eater",100,"Stanley Carter is the Sin-Eater, a major Spider-Man-related antagonist."]
  ]),
- Q("mar-03","marvel-comics","Name a character who has wielded an Infinity Gem or Stone in Marvel Comics.","The Gems have passed through many hands and storylines.","infinity","The Infinity Gems",[
+ Q("mar-03","marvel-comics","Name a character, artefact or cosmic being connected to the Infinity Gems in Marvel Comics.","The Gems have passed through many hands and storylines.","infinity","The Infinity Gems",[
  ["Thanos",10,"Thanos famously assembles the Infinity Gauntlet."],["Adam Warlock",10,"Adam Warlock is closely tied to the Soul Gem."],["Nebula",30,"Nebula briefly takes control of the completed Gauntlet."],["Magus",60,"The Magus uses the Infinity Gems in his cosmic schemes."],["Reed Richards",60,"Reed Richards has been entrusted with the Infinity Gems."],["Pip the Troll",85,"Pip has been part of the Infinity Watch and its Gem storylines."],["Gamora",30,"Gamora has served as a member of the Infinity Watch."],["Doctor Strange",30,"Doctor Strange has used and guarded powerful cosmic artefacts."],
  ["The Collector",30,"The Collector has possessed and sought cosmic artefacts including Gems."],
  ["The Grandmaster",60,"The Grandmaster has been involved in cosmic contests around the Gems."],
@@ -230,7 +230,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Question",85,"Vic Sage and Renee Montoya have worked with League-related teams."],
  ["Animal Man",100,"Animal Man has been part of Justice League lineups in comics."]
  ]),
- Q("dcc-02","dc-comics","Name a Green Lantern from any sector or era.","The Corps is much larger than one ring-bearer.","lanterns","The Green Lantern Corps",[
+ Q("dcc-02","dc-comics","Name a Lantern from any DC Corps, sector or era.","The Corps is much larger than one ring-bearer.","lanterns","The Green Lantern Corps",[
  ["Hal Jordan",10,"Hal Jordan is one of Earth's best-known Green Lanterns."],["John Stewart",10,"John Stewart is an architect and prominent Lantern."],["Guy Gardner",30,"Guy Gardner is a brash and powerful Lantern."],["Kyle Rayner",30,"Kyle Rayner becomes a major Green Lantern after Hal Jordan."],["Jessica Cruz",30,"Jessica Cruz overcomes fear to become a Green Lantern."],["Simon Baz",60,"Simon Baz is a Green Lantern of Lebanese-American heritage."],["Kilowog",30,"Kilowog is a veteran Lantern and drill instructor."],["Tomar-Re",60,"Tomar-Re is a respected alien Green Lantern."],["Soranik Natu",85,"Soranik Natu is a doctor and Green Lantern from Korugar."],["Mogo",100,"Mogo is a sentient planet and a member of the Corps."],
  ["Arisia Rrab",30,"Arisia is a Green Lantern from Sector 2815."],
  ["Chaselon",60,"Chaselon is an alien Green Lantern from Sector 1416."],
