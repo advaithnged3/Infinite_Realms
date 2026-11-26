@@ -1,128 +1,26 @@
 "use client";
-
-import { useMemo, useState } from "react";
-
-type Universe = "mixed" | "mcu" | "dc-movies" | "marvel-comics" | "dc-comics";
-type Question = { prompt: string; hint: string; accepted: { answer: string; points: number }[] };
-
-const universeLabels: Record<Universe, string> = {
-  mixed: "Daily Mixed",
-  mcu: "MCU",
-  "dc-movies": "DC Movies",
-  "marvel-comics": "Marvel Comics",
-  "dc-comics": "DC Comics"
-};
-
-const demoQuestions: Question[] = [
-  { prompt: "Name one of the original six Avengers from the MCU.", hint: "Think of the team assembled in 2012.", accepted: [{ answer: "Iron Man", points: 10 }, { answer: "Captain America", points: 30 }, { answer: "Thor", points: 60 }, { answer: "Hawkeye", points: 85 }, { answer: "Black Widow", points: 100 }, { answer: "Hulk", points: 60 }] },
-  { prompt: "Name a member of the Justice League.", hint: "Think beyond the Trinity.", accepted: [{ answer: "Batman", points: 10 }, { answer: "Superman", points: 10 }, { answer: "Wonder Woman", points: 30 }, { answer: "Aquaman", points: 60 }, { answer: "Martian Manhunter", points: 85 }, { answer: "Green Lantern", points: 60 }, { answer: "Flash", points: 30 }] },
-  { prompt: "Name a mutant from Marvel Comics.", hint: "A character associated with the X-Men.", accepted: [{ answer: "Wolverine", points: 10 }, { answer: "Cyclops", points: 30 }, { answer: "Storm", points: 60 }, { answer: "Nightcrawler", points: 85 }, { answer: "Jubilee", points: 100 }] },
-  { prompt: "Name a member of the Bat-Family.", hint: "Think of a former Robin or a close ally.", accepted: [{ answer: "Nightwing", points: 30 }, { answer: "Robin", points: 10 }, { answer: "Batgirl", points: 60 }, { answer: "Red Hood", points: 85 }, { answer: "The Signal", points: 100 }] },
-  { prompt: "Name a character who has wielded the Infinity Gauntlet in Marvel stories.", hint: "Thanos is one possible answer.", accepted: [{ answer: "Thanos", points: 10 }, { answer: "Adam Warlock", points: 60 }, { answer: "Nebula", points: 85 }, { answer: "Tony Stark", points: 30 }, { answer: "Captain America", points: 100 }] },
-  { prompt: "Name a Green Lantern from DC Comics.", hint: "Hal Jordan is one possible answer.", accepted: [{ answer: "Hal Jordan", points: 10 }, { answer: "John Stewart", points: 30 }, { answer: "Guy Gardner", points: 60 }, { answer: "Kyle Rayner", points: 85 }, { answer: "Jessica Cruz", points: 100 }] },
-  { prompt: "Name a ruler or cosmic entity from Marvel or DC.", hint: "Think of a character with power over a realm or reality.", accepted: [{ answer: "Doctor Doom", points: 30 }, { answer: "Darkseid", points: 10 }, { answer: "Kang", points: 60 }, { answer: "The Beyonder", points: 85 }, { answer: "The Living Tribunal", points: 100 }] }
-];
-
-const destinations = [
-  { min: 0, max: 99, marvel: "Earth-616", dc: "Earth-1", mixed: "Earth-616 / Earth-1", note: "Your journey into the multiverse begins." },
-  { min: 100, max: 199, marvel: "The Moon", dc: "The Moon", mixed: "The Moon", note: "You have taken your first step beyond Earth." },
-  { min: 200, max: 299, marvel: "Asgard", dc: "Oa", mixed: "Asgard / Oa", note: "You have reached the realms of cosmic power." },
-  { min: 300, max: 399, marvel: "Ultimate Universe", dc: "Absolute Universe", mixed: "Ultimate / Absolute Universe", note: "You have crossed into another reality." },
-  { min: 400, max: 549, marvel: "The House of Ideas", dc: "The World Forge", mixed: "House of Ideas / World Forge", note: "You stand where worlds are imagined and forged." },
-  { min: 550, max: 699, marvel: "The Beyondverse", dc: "The Source Wall", mixed: "Beyondverse / Source Wall", note: "You have reached the edge of existence." },
-  { min: 700, max: 700, marvel: "The One Above All", dc: "The Presence", mixed: "The One Above All • The Beyonder • The Presence", note: "A perfect score. You have transcended every realm." }
-];
-
-function getDestination(score: number, universe: Universe) {
-  const tier = destinations.find((d) => score >= d.min && score <= d.max)!;
-  if (universe === "mixed") return { name: tier.mixed, note: tier.note, perfect: score === 700 };
-  if (universe === "dc-movies" || universe === "dc-comics") return { name: tier.dc, note: tier.note, perfect: score === 700 };
-  return { name: tier.marvel, note: tier.note, perfect: score === 700 };
-}
-
-function normalise(value: string) {
-  return value.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
-}
-
-export default function Home() {
-  const [universe, setUniverse] = useState<Universe>("mixed");
-  const [screen, setScreen] = useState<"home" | "quiz" | "result">("home");
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [answer, setAnswer] = useState("");
-  const [score, setScore] = useState(0);
-  const [answers, setAnswers] = useState<string[]>([]);
-  const [showHint, setShowHint] = useState(false);
-  const [history, setHistory] = useState<{ score: number; universe: Universe; date: string }[]>([]);
-
-  const question = demoQuestions[questionIndex];
-  const destination = useMemo(() => getDestination(score, universe), [score, universe]);
-
-  function startQuiz() {
-    setQuestionIndex(0); setAnswer(""); setScore(0); setAnswers([]); setShowHint(false); setScreen("quiz");
-  }
-
-  function submitAnswer() {
-    const clean = normalise(answer);
-    const match = question.accepted.find((a) => normalise(a.answer) === clean);
-    const points = match?.points ?? 0;
-    const nextScore = score + points;
-    setScore(nextScore);
-    setAnswers((prev) => [...prev, answer.trim() || "No answer"]);
-    setAnswer(""); setShowHint(false);
-    if (questionIndex === demoQuestions.length - 1) {
-      setScore(nextScore);
-      setHistory((prev) => [{ score: nextScore, universe, date: new Date().toLocaleDateString() }, ...prev].slice(0, 5));
-      setScreen("result");
-    } else {
-      setQuestionIndex((i) => i + 1);
-    }
-  }
-
-  return (
-    <main className="site-shell">
-      <div className="ambient ambient-one" /><div className="ambient ambient-two" />
-      <header className="topbar">
-        <a className="brand" href="#" onClick={(e) => { e.preventDefault(); setScreen("home"); }}><span className="brand-mark">✳</span><span>INFINITE <b>REALMS</b></span></a>
-        <nav><button onClick={() => setScreen("home")}>Home</button><button onClick={() => setScreen("home")}>The Realms</button><button onClick={() => setScreen("home")}>Leaderboard</button><button onClick={() => setScreen("home")}>Archive</button></nav>
-        <span className="edition">DAILY MULTIVERSE CHALLENGE <i /></span>
-      </header>
-
-      {screen === "home" && <section className="hero">
-        <div className="hero-copy">
-          <div className="eyebrow"><span /> THE MULTIVERSE AWAITS</div>
-          <h1>KNOW THE<br /><em>UNIVERSE.</em><br />CLAIM YOUR<br />DESTINY.</h1>
-          <p className="hero-description">Seven questions stand between you and the farthest reaches of comic-book mythology. Every answer takes you closer to your ultimate destination.</p>
-          <div className="hero-stats"><div><strong>07</strong><span>QUESTIONS</span></div><div><strong>700</strong><span>MAX POINTS</span></div><div><strong>∞</strong><span>POSSIBILITIES</span></div></div>
-          <button className="primary-cta" onClick={startQuiz}>ENTER THE MULTIVERSE <span>↗</span></button>
-          <p className="microcopy">ONE DAILY CHALLENGE · ONE SHARED DESTINY</p>
-        </div>
-        <div className="cosmos-art" aria-label="Original abstract cosmic portal artwork">
-          <div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="portal"><div className="portal-core" /><div className="portal-glow" /></div>
-          <div className="shard shard-a" /><div className="shard shard-b" /><div className="shard shard-c" />
-          <div className="art-caption"><span>FIG. 001</span><b>THE INFINITE EXPANSE</b><span>BEYOND THE KNOWN</span></div>
-          <div className="floating-label label-top">EARTH / 616</div><div className="floating-label label-bottom">SOURCE UNKNOWN</div>
-        </div>
-        <div className="hero-bottom"><span>SCROLL TO EXPLORE</span><span className="line" /><span>EST. ACROSS EVERY REALITY</span></div>
-      </section>}
-
-      {screen === "home" && <section className="realm-section">
-        <div className="section-heading"><div><div className="eyebrow">CHOOSE YOUR REALITY</div><h2>WHICH REALM <em>CALLS YOU?</em></h2></div><p>Each universe has its own lore, legends and final destination. Or test your knowledge across them all.</p></div>
-        <div className="realm-grid">
-          {(["mixed", "mcu", "dc-movies", "marvel-comics", "dc-comics"] as Universe[]).map((u, i) => <button key={u} className={`realm-card realm-${i} ${universe === u ? "selected" : ""}`} onClick={() => setUniverse(u)}><span className="realm-number">0{i + 1}</span><span className="realm-symbol">{["✧", "◉", "◇", "✳", "⬡"][i]}</span><b>{universeLabels[u]}</b><small>{i === 0 ? "ALL FOUR WORLDS · DAILY" : i === 1 ? "MARVEL CINEMATIC UNIVERSE" : i === 2 ? "DC FILMS & TELEVISION" : i === 3 ? "MARVEL COMIC CONTINUITY" : "DC COMIC CONTINUITY"}</small><span className="realm-arrow">↗</span></button>)}
-        </div>
-        <div className="selected-realm"><span>SELECTED REALM</span><b>{universeLabels[universe]}</b><button onClick={startQuiz}>PLAY THIS CHALLENGE ↗</button></div>
-      </section>}
-
-      {screen === "quiz" && <section className="quiz-wrap">
-        <div className="quiz-top"><button className="back-link" onClick={() => setScreen("home")}>← EXIT CHALLENGE</button><span>{universeLabels[universe].toUpperCase()} / DAILY CHALLENGE</span><span>POINTS <b>{score}</b> / 700</span></div>
-        <div className="quiz-progress">{demoQuestions.map((_, i) => <span key={i} className={i <= questionIndex ? "active" : ""} />)}</div>
-        <div className="question-panel"><div className="eyebrow">QUESTION {String(questionIndex + 1).padStart(2, "0")} <span className="slash">/ 07</span></div><h2>{question.prompt}</h2><p className="answer-instruction">TYPE YOUR ANSWER BELOW. SPELLING COUNTS.</p><form onSubmit={(e) => { e.preventDefault(); if (answer.trim()) submitAnswer(); }}><input autoFocus value={answer} onChange={(e) => setAnswer(e.target.value)} placeholder="Your answer..." /><button className="primary-cta" disabled={!answer.trim()}>LOCK ANSWER <span>↗</span></button></form><button className="hint-button" onClick={() => setShowHint((v) => !v)}>{showHint ? "HIDE HINT" : "NEED A CLUE?"}</button>{showHint && <p className="hint-text">{question.hint}</p>}</div>
-        <div className="quiz-foot"><span>YOUR DESTINATION IS REVEALED AT THE END</span><span>NO TURNING BACK</span></div>
-      </section>}
-
-      {screen === "result" && <section className="result-wrap"><div className="eyebrow">CHALLENGE COMPLETE · {universeLabels[universe].toUpperCase()}</div><div className="result-score">{score}<span> / 700</span></div><div className="result-rule" /><p className="result-kicker">YOUR DESTINATION</p><h1 className="destination-title">{destination.name}</h1><p className="destination-note">{destination.note}</p>{destination.perfect && <div className="perfect-seal">✦ BEYOND ALL REALMS · PERFECT SCORE ✦</div>}<div className="result-actions"><button className="primary-cta" onClick={() => setScreen("home")}>RETURN TO THE REALMS ↗</button><button className="secondary-cta" onClick={startQuiz}>PLAY AGAIN</button></div><p className="microcopy">YOUR DESTINATION IS DETERMINED BY YOUR SCORE AND SELECTED UNIVERSE.</p></section>}
-
-      <footer className="footer"><span>INFINITE REALMS <b>© 2026</b></span><span>AN UNOFFICIAL FAN-MADE CONCEPT · NOT AFFILIATED WITH MARVEL OR DC</span><span>BUILT FOR THE CURIOUS <i>✳</i></span></footer>
-    </main>
-  );
+import {useMemo,useState} from "react";
+import {mixedQuestions,questionSets,rarity,universeLabels,type Question,type Universe} from "./quiz-data";
+type Screen="home"|"quiz"|"result"; type Reply={value:string;correct:boolean;points:number;answer:string;explanation:string};
+const tiers=[{min:0,max:99,m:"Earth-616",d:"Earth-1",x:"Earth-616 / Earth-1",line:"Every great journey begins somewhere."},{min:100,max:199,m:"The Moon",d:"The Moon",x:"The Moon",line:"You have left the familiar world behind."},{min:200,max:299,m:"Asgard",d:"Oa",x:"Asgard / Oa",line:"You have entered a realm of extraordinary power."},{min:300,max:399,m:"Ultimate Universe",d:"Absolute Universe",x:"Ultimate / Absolute Universe",line:"A new reality opens before you."},{min:400,max:549,m:"The House of Ideas",d:"The World Forge",x:"House of Ideas / World Forge",line:"You have reached the place where worlds take shape."},{min:550,max:699,m:"The Beyondverse",d:"The Source Wall",x:"Beyondverse / Source Wall",line:"You stand at the edge of everything known."},{min:700,max:700,m:"The One Above All",d:"The Presence",x:"The One Above All • The Beyonder • The Presence",line:"Beyond all realities. A perfect run."}];
+const meta:Record<Universe,{eyebrow:string;symbol:string}>={mixed:{eyebrow:"THE DAILY CONVERGENCE",symbol:"✧"},mcu:{eyebrow:"EARTH-199999",symbol:"◉"},"dc-movies":{eyebrow:"THE DC SCREENVERSE",symbol:"◇"},"marvel-comics":{eyebrow:"THE MARVEL MULTIVERSE",symbol:"✳"},"dc-comics":{eyebrow:"THE DC MULTIVERSE",symbol:"⬡"}};
+const scenes:Record<string,string>={agency:"agency",planet:"planet",asgard:"asgard",ai:"ai",tech:"tech",herb:"herb",space:"space",city:"city",island:"island",machine:"machine",underwater:"underwater",script:"script",cosmic:"cosmic",lightning:"lightning",mooncity:"moon",gem:"gem",star:"star",dimension:"dimension",phoenix:"phoenix",oa:"oa",orange:"orange",mystic:"mystic",antimatter:"antimatter"};
+function norm(s:string){return s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"")}
+function destination(score:number,u:Universe){const t=tiers.find(x=>score>=x.min&&score<=x.max)||tiers[0];return {...t,name:u==="mixed"?t.x:u==="dc-movies"||u==="dc-comics"?t.d:t.m,perfect:score===700}}
+export default function Home(){
+ const [universe,setUniverse]=useState<Universe>("mixed"),[screen,setScreen]=useState<Screen>("home"),[index,setIndex]=useState(0),[answer,setAnswer]=useState(""),[score,setScore]=useState(0),[feedback,setFeedback]=useState<Reply|null>(null),[replies,setReplies]=useState<Reply[]>([]),[hint,setHint]=useState(false);
+ const qs:Question[]=universe==="mixed"?mixedQuestions:questionSets[universe],q=qs[index],dest=useMemo(()=>destination(score,universe),[score,universe]);
+ function start(){setIndex(0);setAnswer("");setScore(0);setFeedback(null);setReplies([]);setHint(false);setScreen("quiz")}
+ function submit(){if(!answer.trim()||feedback)return;const correct=[q.answer,...q.aliases].some(a=>norm(a)===norm(answer));const r={value:answer.trim(),correct,points:correct?q.points:0,answer:q.answer,explanation:q.explanation};setScore(s=>s+r.points);setReplies(a=>[...a,r]);setFeedback(r)}
+ function next(){if(index===qs.length-1){setFeedback(null);setScreen("result")}else{setIndex(i=>i+1);setAnswer("");setFeedback(null);setHint(false)}}
+ return <main className="ir-app"><div className="starfield"/><div className="nebula nebula-a"/><div className="nebula nebula-b"/>
+ <header className="ir-nav"><button className="ir-brand" onClick={()=>setScreen("home")}><span>✳</span> INFINITE <b>REALMS</b></button><div className="nav-center">THE MULTIVERSE TRIVIA EXPERIENCE <i/></div><button className="nav-pill" onClick={()=>setScreen("home")}>THE REALMS ↗</button></header>
+ {screen==="home"&&<><section className="ir-hero"><div className="hero-visual"><div className="hero-image-frame"/><div className="orbit-ring ring-one"/><div className="orbit-ring ring-two"/><span className="hero-coordinate">MULTIVERSE<br/>SECTOR 01—∞</span></div><div className="hero-content"><div className="overline"><i/> A DAILY TEST OF LEGENDARY KNOWLEDGE</div><h1>THE<br/><em>UNIVERSE</em><br/>IS YOURS.</h1><p>Seven questions. Countless realities. Every answer earns its place in the multiverse. Discover where your knowledge takes you.</p><div className="hero-facts"><div><b>07</b><span>QUESTIONS</span></div><div><b>700</b><span>MAX POINTS</span></div><div><b>05</b><span>REALMS</span></div></div><button className="launch-button" onClick={start}>ENTER THE MULTIVERSE <b>↗</b></button><div className="launch-note">TODAY'S CHALLENGE IS WAITING <span>●</span></div></div><div className="hero-index"><span>01</span><div/><span>THE BEGINNING OF EVERYTHING</span></div></section>
+ <section className="realm-picker"><div className="section-intro"><div><div className="overline">CHOOSE YOUR CONTINUITY</div><h2>SELECT YOUR <em>REALM.</em></h2></div><p>Choose a single universe for a lore-specific challenge, or enter the daily convergence and face them all.</p></div><div className="realm-cards">{(["mixed","mcu","dc-movies","marvel-comics","dc-comics"] as Universe[]).map((u,i)=><button key={u} onClick={()=>setUniverse(u)} className={`realm-tile tile-${i} ${universe===u?"tile-selected":""}`}><span className="tile-number">0{i+1} / REALM</span><span className="tile-art">{meta[u].symbol}</span><b>{universeLabels[u]}</b><small>{meta[u].eyebrow}</small><span className="tile-bottom">{universe===u?"SELECTED":"EXPLORE REALM"} <i>↗</i></span></button>)}</div><div className="realm-selection"><span>YOUR CURRENT REALM</span><b>{universeLabels[universe]}</b><button onClick={start}>BEGIN CHALLENGE ↗</button></div></section>
+ <section className="how-section"><div className="overline">THE RULES OF THE REALM</div><h2>KNOW MORE.<br/><em>GO FURTHER.</em></h2><div className="rule-grid"><article><span>01</span><b>SEVEN QUESTIONS</b><p>Type your answer. Each question has a canonical answer and curated accepted aliases.</p></article><article><span>02</span><b>CLAIM YOUR POINTS</b><p>Every correct answer reveals its rarity and awards 10, 30, 60, 85 or 100 points.</p></article><article><span>03</span><b>REVEAL YOUR DESTINY</b><p>Your final score determines your destination. Your selected universe determines its identity.</p></article></div></section></>}
+ {screen==="quiz"&&q&&<section className="play-screen"><div className="play-top"><button onClick={()=>setScreen("home")}>← LEAVE CHALLENGE</button><span>{meta[universe].eyebrow} / DAILY TRIAL</span><span className="live-score">SCORE <b>{score}</b><i>/ 700</i></span></div><div className="play-progress">{qs.map((item,i)=><div key={item.id} className={i<index?"done":i===index?"current":""}><span>{String(i+1).padStart(2,"0")}</span></div>)}</div>
+ <div className="play-layout"><div className="question-art"><div className={`scene-illustration scene-${scenes[q.visual]||"cosmic"}`}><div className="scene-orb"/><div className="scene-horizon"/><div className="scene-grid"/></div><div className="art-meta"><span>REALM FILE / {q.universe.toUpperCase()}</span><span>CLASSIFIED LORE</span></div><div className="art-caption">{q.visualAlt}</div></div><div className="question-side"><div className="question-meta"><span>QUESTION {String(index+1).padStart(2,"0")} <i>/ 07</i></span><span>{universeLabels[universe].toUpperCase()}</span></div><h2 key={q.id}>{q.prompt}</h2><div className="answer-label">ENTER YOUR ANSWER <span>· SPELLING FLEXIBLE</span></div><form onSubmit={e=>{e.preventDefault();submit()}}><input autoFocus value={answer} disabled={!!feedback} onChange={e=>setAnswer(e.target.value)} placeholder="Your answer..." aria-label="Your answer"/><button className="answer-submit" disabled={!answer.trim()||!!feedback}>LOCK IT IN <b>↗</b></button></form><button className="hint-trigger" onClick={()=>setHint(v=>!v)}>{hint?"− CLOSE CLUE":"+ REVEAL A CLUE"}</button>{hint&&<div className="hint-panel">{q.hint}</div>}<div className="answer-foot"><span>ONE ANSWER PER QUESTION</span><span>YOUR DESTINATION AWAITS</span></div></div></div>
+ {feedback&&<div className="reveal-backdrop"><div className={`reveal-card ${feedback.correct?"reveal-correct":"reveal-wrong"}`}><div className="reveal-top"><span>{feedback.correct?"ANSWER ACCEPTED":"REALM KNOWLEDGE REVEALED"}</span><span>{String(index+1).padStart(2,"0")} / 07</span></div><div className="reveal-symbol">{feedback.correct?"✦":"◈"}</div><div className="reveal-status">{feedback.correct?"YOU FOUND THE ANSWER":"NOT QUITE THIS TIME"}</div><h3>{feedback.answer}</h3>{feedback.correct?<div className="points-won">+{feedback.points}<span> POINTS</span></div>:<div className="points-missed">+0 <span>POINTS</span></div>}{feedback.correct&&<div className="rarity-line"><span className={`rarity-dot rarity-${feedback.points}`}/>{rarity[feedback.points].name} · {rarity[feedback.points].description}</div>}<p>{feedback.explanation}</p><div className="reveal-score"><span>TOTAL SCORE</span><b>{score}<i> / 700</i></b></div><button className="continue-button" onClick={next}>{index===qs.length-1?"REVEAL MY DESTINATION":"CONTINUE TO NEXT QUESTION"} <b>↗</b></button></div></div>}</section>}
+ {screen==="result"&&<section className="final-screen"><div className="final-backdrop"/><div className="final-overline">TRIAL COMPLETE / {universeLabels[universe].toUpperCase()}</div><div className="final-score">{score}<span> / 700</span></div><div className="final-divider"><i/><span>YOUR DESTINATION HAS BEEN CHOSEN</span><i/></div><div className="destination-orbit"><div className="destination-core">✧</div></div><div className="destination-label">YOU HAVE REACHED</div><h1>{dest.name}</h1><p className="destination-line">{dest.line}</p>{dest.perfect&&<div className="perfect-award">✦ BEYOND ALL REALMS — PERFECT SCORE ✦</div>}<div className="final-actions"><button className="launch-button" onClick={()=>setScreen("home")}>RETURN TO THE MULTIVERSE ↗</button><button className="final-secondary" onClick={start}>PLAY AGAIN</button></div><div className="answer-recap"><h3>YOUR ANSWER LOG</h3>{replies.map((r,i)=><div key={i}><span>{String(i+1).padStart(2,"0")}</span><b>{r.answer}</b><small>{r.correct?"CORRECT":"INCORRECT"}</small><strong>+{r.points}</strong></div>)}</div></section>}
+ <footer className="ir-footer"><span>INFINITE REALMS <b>© 2026</b></span><span>UNOFFICIAL FAN-MADE TRIVIA EXPERIENCE · NOT AFFILIATED WITH MARVEL OR DC</span><span>BEYOND THE KNOWN ✳</span></footer></main>
 }
