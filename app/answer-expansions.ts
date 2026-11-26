@@ -256,7 +256,7 @@ function distance(a: string, b: string): number {
 
 function allSpellings(option: AnswerOption): string[] {
   const identities = identityAliases[clean(option.value)] || [];
-  return [...new Set([option.value, ...option.aliases, ...identities])];
+  return Array.from(new Set([option.value, ...option.aliases, ...identities]));
 }
 
 export function resolveAnswer(question: Question, raw: string): AnswerOption | null {
@@ -318,7 +318,7 @@ for (const questions of Object.values(questionSets)) {
         const key = clean(alias);
         return key !== clean(option.value) && !canonicalKeys.has(key);
       });
-      option.aliases = [...new Set([...option.aliases, ...safeExtra])];
+      option.aliases = Array.from(new Set([...option.aliases, ...safeExtra]));
     }
   }
 }
