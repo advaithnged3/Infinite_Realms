@@ -14,13 +14,13 @@ const universeLabels: Record<Universe, string> = {
 };
 
 const demoQuestions: Question[] = [
-  { prompt: "What is the name of the organisation that monitored the timeline in the MCU series Loki?", hint: "Three letters.", accepted: [{ answer: "TVA", points: 100 }, { answer: "Time Variance Authority", points: 100 }] },
-  { prompt: "What is the name of Thor's hammer?", hint: "A legendary weapon forged in Nidavellir.", accepted: [{ answer: "Mjolnir", points: 100 }, { answer: "Mjölnir", points: 100 }] },
-  { prompt: "Which city is most closely associated with Batman?", hint: "A dark, fictional American city.", accepted: [{ answer: "Gotham", points: 100 }, { answer: "Gotham City", points: 100 }] },
-  { prompt: "What metal is bonded to Wolverine's skeleton?", hint: "A fictional indestructible alloy.", accepted: [{ answer: "Adamantium", points: 100 }] },
-  { prompt: "What is the name of Superman's home planet?", hint: "It was destroyed.", accepted: [{ answer: "Krypton", points: 100 }] },
-  { prompt: "What is the name of the island where Wonder Woman was raised?", hint: "A hidden home of the Amazons.", accepted: [{ answer: "Themyscira", points: 100 }, { answer: "Themyscira Island", points: 100 }] },
-  { prompt: "What is the name of the fictional African nation ruled by Black Panther?", hint: "Its capital is Birnin Zana.", accepted: [{ answer: "Wakanda", points: 100 }] }
+  { prompt: "Name one of the original six Avengers from the MCU.", hint: "Think of the team assembled in 2012.", accepted: [{ answer: "Iron Man", points: 10 }, { answer: "Captain America", points: 30 }, { answer: "Thor", points: 60 }, { answer: "Hawkeye", points: 85 }, { answer: "Black Widow", points: 100 }, { answer: "Hulk", points: 60 }] },
+  { prompt: "Name a member of the Justice League.", hint: "Think beyond the Trinity.", accepted: [{ answer: "Batman", points: 10 }, { answer: "Superman", points: 10 }, { answer: "Wonder Woman", points: 30 }, { answer: "Aquaman", points: 60 }, { answer: "Martian Manhunter", points: 85 }, { answer: "Green Lantern", points: 60 }, { answer: "Flash", points: 30 }] },
+  { prompt: "Name a mutant from Marvel Comics.", hint: "A character associated with the X-Men.", accepted: [{ answer: "Wolverine", points: 10 }, { answer: "Cyclops", points: 30 }, { answer: "Storm", points: 60 }, { answer: "Nightcrawler", points: 85 }, { answer: "Jubilee", points: 100 }] },
+  { prompt: "Name a member of the Bat-Family.", hint: "Think of a former Robin or a close ally.", accepted: [{ answer: "Nightwing", points: 30 }, { answer: "Robin", points: 10 }, { answer: "Batgirl", points: 60 }, { answer: "Red Hood", points: 85 }, { answer: "The Signal", points: 100 }] },
+  { prompt: "Name a character who has wielded the Infinity Gauntlet in Marvel stories.", hint: "Thanos is one possible answer.", accepted: [{ answer: "Thanos", points: 10 }, { answer: "Adam Warlock", points: 60 }, { answer: "Nebula", points: 85 }, { answer: "Tony Stark", points: 30 }, { answer: "Captain America", points: 100 }] },
+  { prompt: "Name a Green Lantern from DC Comics.", hint: "Hal Jordan is one possible answer.", accepted: [{ answer: "Hal Jordan", points: 10 }, { answer: "John Stewart", points: 30 }, { answer: "Guy Gardner", points: 60 }, { answer: "Kyle Rayner", points: 85 }, { answer: "Jessica Cruz", points: 100 }] },
+  { prompt: "Name a ruler or cosmic entity from Marvel or DC.", hint: "Think of a character with power over a realm or reality.", accepted: [{ answer: "Doctor Doom", points: 30 }, { answer: "Darkseid", points: 10 }, { answer: "Kang", points: 60 }, { answer: "The Beyonder", points: 85 }, { answer: "The Living Tribunal", points: 100 }] }
 ];
 
 const destinations = [
