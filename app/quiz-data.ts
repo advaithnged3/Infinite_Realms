@@ -128,7 +128,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ]),
  Q("dcm-07","dc-movies","Name a magical or supernatural character from a DC film.","Not every DC hero relies on gadgets or super-strength.","magic","The supernatural side of DC films",[
  ["Shazam",10,"Billy Batson transforms through a magical word."],["Black Adam",10,"Teth-Adam's powers originate from ancient magic."],["Doctor Fate",30,"Kent Nelson wields the power of the Lords of Order."],["Enchantress",30,"June Moone becomes the supernatural Enchantress."],["Zatanna",60,"Zatanna is a powerful stage magician and sorceress in DC stories."],["Constantine",60,"John Constantine is an occult detective in DC adaptations."],["The Wizard",100,"The Wizard is the ancient sorcerer who grants Billy Batson his powers in Shazam!."],
- ["The Wizard",30,"The Wizard grants Billy Batson his powers in Shazam!."],
+ 
  ["Sabbac",30,"Sabbac is a demonic supernatural antagonist in Black Adam."]
  ])
  ],
@@ -185,7 +185,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Fulcrum",100,"The Fulcrum is a mysterious cosmic being linked to the Celestials and Watchers."]
  ]),
  Q("mar-05","marvel-comics","Name a member of the Fantastic Four or a close ally.","The First Family's circle reaches well beyond its original four.","fantastic4","The Fantastic Four",[
- ["Mister Fantastic",10,"Reed Richards is the team's elastic genius.",["Reed Richards"]],["Invisible Woman",10,"Sue Storm can turn invisible and create force fields.",["Sue Storm"]],["Human Torch",10,"Johnny Storm controls flame.",["Johnny Storm"]],["The Thing",10,"Ben Grimm is the team's rocky powerhouse.",["Ben Grimm"]],["She-Hulk",30,"Jennifer Walters has joined the team in several stories."],["Crystal",60,"Crystal of the Inhumans has been closely associated with the team."],["Franklin Richards",30,"Franklin is Reed and Sue's son, with extraordinary reality-warping powers."],["Valeria Richards",60,"Valeria is Reed and Sue's exceptionally gifted daughter."],["H.E.R.B.I.E.",85,"H.E.R.B.I.E. is the team's robotic companion."],
+ ["Mister Fantastic",10,"Reed Richards is the team's elastic genius.",["Reed Richards"]],["Invisible Woman",10,"Sue Storm can turn invisible and create force fields.",["Sue Storm"]],["Human Torch",10,"Johnny Storm controls flame.",["Johnny Storm"]],["The Thing",10,"Ben Grimm is the team's rocky powerhouse.",["Ben Grimm"]],["She-Hulk",30,"Jennifer Walters has joined the team in several stories."],["Crystal",60,"Crystal of the Inhumans has been closely associated with the team."],["Valeria Richards",60,"Valeria is Reed and Sue's exceptionally gifted daughter."],["H.E.R.B.I.E.",85,"H.E.R.B.I.E. is the team's robotic companion."],
  ["Ant-Man",30,"Scott Lang has worked with the Fantastic Four."],
  ["Medusa",30,"Medusa of the Inhumans has allied with the Fantastic Four."],
  ["Black Bolt",30,"Black Bolt has been a close ally of the Fantastic Four."],
