@@ -233,3 +233,94 @@
 .ir-footer b{color:#ffd05a}
 @media(max-width:620px){.realm-tile>b{font-size:22px}.spell-card{align-items:flex-start}.pool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reveal-card{border-radius:18px}}
 @media(prefers-reduced-motion:reduce){.realm-tile,.spell-card,.launch-button,.hero-image-frame{animation:none!important;transition:none!important}}
+
+
+/* INFINITE REALMS — comic arcade polish pass */
+@keyframes comic-pop{0%{transform:scale(.92) rotate(-1deg);opacity:0}70%{transform:scale(1.025) rotate(.35deg)}100%{transform:scale(1);opacity:1}}
+@keyframes badge-bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(3deg)}}
+@keyframes panel-glint{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes energy-pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,128,83,.2),5px 6px 0 #18213b}50%{box-shadow:0 0 0 12px rgba(255,128,83,0),5px 6px 0 #18213b}}
+@keyframes sticker-spin{0%{transform:rotate(-8deg) scale(.92)}50%{transform:rotate(8deg) scale(1.06)}100%{transform:rotate(-8deg) scale(.92)}}
+.ir-app{background-image:radial-gradient(ellipse at 10% 12%,rgba(255,207,63,.22),transparent 28%),radial-gradient(ellipse at 92% 30%,rgba(40,185,212,.2),transparent 30%),linear-gradient(145deg,#fff8e8,#f7f2ff 52%,#e8f7ff)}
+.starfield{opacity:.44;background-size:31px 31px,47px 47px;animation:star-drift 22s linear infinite}
+.nebula{filter:blur(68px);opacity:.2;animation-duration:11s}
+.ir-nav{box-shadow:0 5px 0 rgba(24,33,59,.08)}
+.ir-brand{font-size:14px;font-weight:1000;letter-spacing:.12em}
+.ir-brand span{display:grid;place-items:center;width:32px;height:32px;border:2px solid #18213b;border-radius:50%;background:#ffcf3f;color:#18213b;font-size:20px;box-shadow:2px 2px 0 #18213b}
+.ir-brand b{color:#315fd4}
+.nav-pill{font-weight:900;transition:.2s}
+.ir-hero{background:linear-gradient(115deg,rgba(255,241,201,.94),rgba(255,224,216,.88) 48%,rgba(223,245,255,.92));border-bottom:2px solid #18213b}
+.ir-hero:after{content:"";position:absolute;right:4%;top:9%;width:110px;height:110px;border:3px solid #18213b;border-radius:50%;background:#ffcf3f;box-shadow:7px 7px 0 #18213b;opacity:.9;clip-path:polygon(50% 0,61% 34%,98% 20%,75% 50%,100% 80%,62% 68%,50% 100%,37% 68%,0 80%,25% 50%,2% 20%,39% 34%);animation:sticker-spin 9s ease-in-out infinite}
+.ir-hero h1{font-size:clamp(76px,10vw,142px);letter-spacing:-.045em;line-height:.74;transform:rotate(-1deg);transform-origin:left center}
+.ir-hero h1 em{color:#315fd4;-webkit-text-stroke:0;text-shadow:4px 4px 0 #fff,7px 8px 0 rgba(24,33,59,.15)}
+.hero-content>p{font-size:15px;font-weight:650;color:#46516d}
+.hero-facts{gap:16px}
+.hero-facts div{min-width:100px;padding:12px 14px;background:rgba(255,255,255,.68);border:2px solid #18213b;border-radius:13px;box-shadow:3px 3px 0 #18213b}
+.hero-facts b{font-size:36px;color:#e74754}
+.hero-facts span{font-weight:900;color:#53607c}
+.launch-button{font-size:12px;animation:energy-pulse 3s ease-in-out infinite}
+.hero-image-frame{border:0;filter:saturate(1.6) contrast(1.05);mix-blend-mode:multiply}
+.orbit-ring{border-width:2px;border-style:dashed;animation-duration:30s}
+.realm-picker{background:linear-gradient(180deg,#fffaf0,#fff0e1)}
+.section-intro h2,.how-section h2{font-size:clamp(45px,5.8vw,72px);letter-spacing:-.02em}
+.section-intro h2 em,.how-section h2 em{color:#e74754;-webkit-text-stroke:0;text-shadow:3px 3px 0 #ffda73}
+.realm-cards{gap:16px}
+.realm-tile{min-height:245px;padding:20px;border-radius:24px;box-shadow:6px 7px 0 #18213b;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s}
+.realm-tile:nth-child(odd){transform:rotate(-.7deg)}
+.realm-tile:nth-child(even){transform:rotate(.7deg)}
+.realm-tile:hover{transform:translateY(-10px) rotate(0) scale(1.025);box-shadow:8px 13px 0 #18213b}
+.realm-tile .tile-art{animation:badge-bob 4.5s ease-in-out infinite}
+.realm-tile:nth-child(2) .tile-art{animation-delay:-.8s}
+.realm-tile:nth-child(3) .tile-art{animation-delay:-1.5s}
+.realm-tile:nth-child(4) .tile-art{animation-delay:-2.1s}
+.realm-tile:nth-child(5) .tile-art{animation-delay:-2.8s}
+.tile-0 .tile-art{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:#315fd4;color:#fff;border:3px solid #18213b;box-shadow:4px 4px 0 #18213b;font-size:34px}
+.tile-1 .tile-art,.tile-3 .tile-art{font-family:Arial,sans-serif;font-style:italic;font-weight:1000;letter-spacing:-1.8px;text-shadow:1px 1px 0 rgba(0,0,0,.2);border:2px solid #18213b}
+.tile-2 .tile-art,.tile-4 .tile-art{background:#0879df;border:3px solid #18213b;outline:3px solid #fff;box-shadow:3px 3px 0 #18213b}
+.realm-selection{padding:16px 18px;border:2px solid #18213b;border-radius:16px;background:#fff;box-shadow:4px 4px 0 #18213b}
+.realm-selection button{font-weight:900;transition:.2s}
+.realm-selection button:hover{transform:translateY(-2px);box-shadow:5px 5px 0 #18213b}
+.how-section{background:linear-gradient(120deg,#e6f6ff,#fff1e9);border-top:2px solid #18213b}
+.rule-grid{gap:17px}
+.rule-grid article{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.rule-grid article:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:7px 8px 0 #18213b}
+.rule-grid article>span{display:grid;place-items:center;width:36px;height:36px;background:#ffcf3f;border:2px solid #18213b;border-radius:50%;font-size:12px;font-weight:1000;box-shadow:2px 2px 0 #18213b}
+.play-screen{background:radial-gradient(circle at 80% 15%,rgba(255,208,88,.3),transparent 25%),radial-gradient(circle at 8% 82%,rgba(91,203,226,.2),transparent 26%),linear-gradient(140deg,#fff7e9,#e9f6ff 52%,#f8eaff)}
+.play-top{font-weight:900}
+.play-progress>div{height:10px;border:1px solid #18213b;overflow:visible}
+.play-progress>div.done{background:#45c995}
+.play-progress>div.current{background:#ffcb43;animation:energy-pulse 2s infinite}
+.question-art{background:#18213b}
+.scene-illustration{min-height:390px}
+.art-meta{font-weight:900}
+.art-caption{font-size:12px;font-weight:900}
+.question-side{background:rgba(255,255,255,.75);border:2px solid #18213b;border-radius:23px;padding:28px;box-shadow:6px 7px 0 #18213b}
+.question-side h2{font-size:clamp(29px,3.3vw,44px);line-height:1.06;letter-spacing:-.035em}
+.answer-label{font-size:10px;line-height:1.8}
+.question-side form{gap:12px}
+.question-side input{font-size:17px;font-weight:750;padding:16px}
+.answer-submit{font-size:12px;padding:15px 20px;transition:transform .16s,box-shadow .16s}
+.answer-submit:not(:disabled):hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #18213b}
+.hint-trigger{padding:9px 0}
+.hint-panel{font-size:13px;font-weight:700;animation:comic-pop .2s ease-out}
+.spell-card{animation:comic-pop .24s cubic-bezier(.2,.9,.3,1)}
+.spell-choice{font-size:14px;transition:.18s}
+.spell-choice:hover{transform:scale(1.05) rotate(-1deg);box-shadow:2px 3px 0 #18764f}
+.identity-match{margin:10px auto 14px;padding:9px 12px;max-width:max-content;border-radius:999px;background:#e6f7ff;border:1px dashed #315fd4;color:#315fd4;font:10px 'DM Mono',monospace;letter-spacing:.04em}
+.identity-match b{color:#18213b}
+.reveal-backdrop{padding:22px}
+.reveal-card{animation:comic-pop .28s cubic-bezier(.18,.9,.28,1)}
+.reveal-symbol{display:inline-grid;place-items:center;width:60px;height:60px;border-radius:50%;background:#ffdf71;border:2px solid #18213b;box-shadow:4px 4px 0 #18213b;animation:badge-bob 3s ease-in-out infinite}
+.points-won{font-size:60px;font-weight:1000;letter-spacing:-.05em}
+.pool-chip{transition:transform .15s,box-shadow .15s}
+.pool-chip:hover{transform:translateY(-3px);box-shadow:2px 3px 0 rgba(24,33,59,.16)}
+.continue-button{font-size:12px;transition:.2s}
+.continue-button:hover{transform:translateY(-3px);box-shadow:7px 7px 0 #18213b}
+.final-screen{overflow:hidden}
+.destination-core{animation:badge-bob 5s ease-in-out infinite}
+.final-score{font-size:clamp(80px,12vw,150px);font-weight:1000}
+.answer-recap{box-shadow:6px 6px 0 #18213b}
+.ir-footer{font-weight:700}
+@media(max-width:800px){.ir-hero{min-height:900px;align-items:flex-start;padding-top:58px}.hero-content{width:100%;max-width:640px}.hero-visual{top:370px;width:100%;height:480px}.ir-hero:after{right:6%;top:42%;width:75px;height:75px}.realm-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.realm-tile:last-child{grid-column:span 2}.play-layout{grid-template-columns:1fr}.question-art{min-height:260px}.scene-illustration{min-height:280px}}
+@media(max-width:520px){.ir-nav{padding:0 16px}.nav-center{display:none}.ir-hero{padding-left:20px;padding-right:20px;min-height:810px}.hero-facts{gap:8px}.hero-facts div{min-width:0;flex:1;padding:9px}.hero-facts b{font-size:29px}.realm-picker,.how-section{padding:48px 18px}.realm-cards{gap:10px}.realm-tile{min-height:205px;padding:15px}.realm-tile>b{font-size:20px}.realm-selection{align-items:flex-start;gap:10px;flex-wrap:wrap}.question-side{padding:20px}.question-side form{display:flex;flex-direction:column}.question-side form input,.question-side form button{width:100%}.reveal-card{padding:18px}.pool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.starfield,.nebula,.hero-image-frame,.orbit-ring,.tile-art,.destination-core,.reveal-symbol,.launch-button{animation:none!important}}
