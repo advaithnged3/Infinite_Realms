@@ -254,8 +254,13 @@ function distance(a: string, b: string): number {
   return previous[b.length];
 }
 
+function aliasesForIdentity(value: string): string[] {
+  const key = Object.keys(identityAliases).find(candidate => clean(candidate) === clean(value));
+  return key ? identityAliases[key] : [];
+}
+
 function allSpellings(option: AnswerOption): string[] {
-  const identities = identityAliases[clean(option.value)] || [];
+  const identities = aliasesForIdentity(option.value);
   return Array.from(new Set([option.value, ...option.aliases, ...identities]));
 }
 
@@ -313,7 +318,7 @@ for (const questions of Object.values(questionSets)) {
     question.answers.push(...additions);
     const canonicalKeys = new Set(question.answers.map(option => clean(option.value)));
     for (const option of question.answers) {
-      const extra = identityAliases[clean(option.value)] || [];
+      const extra = aliasesForIdentity(option.value);
       const safeExtra = extra.filter(alias => {
         const key = clean(alias);
         return key !== clean(option.value) && !canonicalKeys.has(key);
