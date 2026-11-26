@@ -13,7 +13,7 @@ const A=(rows:[string,10|30|60|85|100,string,string[]?][]):AnswerOption[]=>rows.
 const Q=(id:string,universe:Question["universe"],prompt:string,hint:string,visual:string,visualAlt:string,rows:[string,10|30|60|85|100,string,string[]?][]):Question=>({id,universe,prompt,hint,visual,visualAlt,answers:A(rows)});
 export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  mcu:[
- Q("mcu-01","mcu","Name a character involved in the Battle of New York.","Earth's Mightiest Heroes assembled against the Chitauri.","avengers","The Battle of New York",[
+ Q("mcu-01","mcu","Name an Avenger or a hero who has served on an Avengers roster in the MCU.","Earth's Mightiest Heroes assembled against the Chitauri.","avengers","The Battle of New York",[
  ["Iron Man",10,"Tony Stark leads the aerial assault and carries the nuclear missile through the portal."],["Captain America",10,"Steve Rogers coordinates the team on the ground."],["Thor",10,"Thor battles the Chitauri and confronts Loki."],["Black Widow",30,"Natasha Romanoff closes the portal using the Tesseract device."],["Hawkeye",30,"Clint Barton fights from the rooftops with his bow."],["Hulk",30,"Bruce Banner transforms and defeats the Chitauri leviathan."],
  ["Maria Hill",60,"S.H.I.E.L.D. Deputy Director Maria Hill coordinates the response during the New York invasion."],
  ["Nick Fury",60,"Nick Fury directs the Avengers Initiative and oversees the response."],
@@ -34,7 +34,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Red Room",85,"The Red Room trains Black Widow operatives."],
  ["S.W.O.R.D.",100,"Sentient Weapon Observation and Response Division is an organisation introduced in WandaVision."]
  ]),
- Q("mcu-04","mcu","Name a character who has lifted or wielded Mjolnir in the MCU.","The enchanted hammer has judged more than one hero worthy.","mjolnir","The enchanted hammer Mjolnir",[
+ Q("mcu-04","mcu","Name an Asgardian, a Thor ally or someone who has wielded Mjolnir in the MCU.","The enchanted hammer has judged more than one hero worthy.","mjolnir","The enchanted hammer Mjolnir",[
  ["Thor",10,"Thor is Mjolnir's traditional wielder."],["Steve Rogers",30,"Steve Rogers proves worthy and lifts Mjolnir in Endgame.",["Captain America"]],["Vision",60,"Vision lifts Mjolnir shortly after being created in Age of Ultron."],["Jane Foster",30,"Jane Foster becomes the Mighty Thor and wields Mjolnir in Love and Thunder.",["Mighty Thor"]],
  ["Odin",100,"Odin wielded Mjolnir in the past and later enchants the hammer."],
  ["Hela",85,"Hela is shown wielding Mjolnir in a flashback before destroying it."],
@@ -78,7 +78,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Ryan Choi",85,"Ryan Choi appears in the Snyder Cut epilogue as a S.T.A.R. Labs scientist."],
  ["Steppenwolf",100,"Steppenwolf appears as the invading antagonist in Justice League; the prompt now includes characters, not only heroes."]
  ]),
- Q("dcm-02","dc-movies","Name a city or place featured in a DC superhero film.","Think of the heroes' home cities and key story locations.","dcplaces","Cities of the DC film worlds",[
+ Q("dcm-02","dc-movies","Name a city, island, planet or hidden base featured in a DC film.","Think of the heroes' home cities and key story locations.","dcplaces","Cities of the DC film worlds",[
  ["Gotham City",10,"Gotham is Batman's home and the setting of multiple DC films.",["Gotham"]],["Metropolis",10,"Metropolis is Superman's adopted home city."],["Themyscira",30,"Themyscira is Diana's Amazon homeland."],["Central City",30,"Central City is associated with Barry Allen in The Flash."],["Atlantis",10,"Atlantis is the underwater kingdom ruled by Arthur Curry."],["Apokolips",60,"Apokolips is Darkseid's homeworld."],["Kahndaq",60,"Kahndaq is the country at the centre of Black Adam."],["Belle Reve",85,"Belle Reve is the prison facility associated with the Suicide Squad."],
  ["Smallville",30,"Smallville is Clark Kent's hometown."],
  ["Corto Maltese",30,"Corto Maltese is the island nation targeted in The Suicide Squad."],
@@ -125,14 +125,14 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The Scarecrow",85,"Jonathan Crane appears in Christopher Nolan's Batman trilogy."],
  ["Ra's al Ghul",100,"Ra's al Ghul is a recurring Batman adversary across major film adaptations."]
  ]),
- Q("dcm-07","dc-movies","Name a magical or supernatural character from a DC film.","Not every DC hero relies on gadgets or super-strength.","magic","The supernatural side of DC films",[
+ Q("dcm-07","dc-movies","Name a magic user, supernatural being or mythic character from a DC film, including animated films.","Not every DC hero relies on gadgets or super-strength.","magic","The supernatural side of DC films",[
  ["Shazam",10,"Billy Batson transforms through a magical word."],["Black Adam",10,"Teth-Adam's powers originate from ancient magic."],["Doctor Fate",30,"Kent Nelson wields the power of the Lords of Order."],["Enchantress",30,"June Moone becomes the supernatural Enchantress."],["Zatanna",60,"Zatanna is a powerful stage magician and sorceress in DC stories."],["Constantine",60,"John Constantine is an occult detective in DC adaptations."],["The Wizard",100,"The Wizard is the ancient sorcerer who grants Billy Batson his powers in Shazam!."],
  
  ["Sabbac",30,"Sabbac is a demonic supernatural antagonist in Black Adam."]
  ])
  ],
  "marvel-comics":[
- Q("mar-01","marvel-comics","Name a member of the X-Men.","The mutant team has had dozens of rosters over the decades.","xmen","The X-Men",[
+ Q("mar-01","marvel-comics","Name a mutant who has been an X-Men member or ally in Marvel Comics.","The mutant team has had dozens of rosters over the decades.","xmen","The X-Men",[
  ["Wolverine",10,"Logan is one of the X-Men's most recognisable members."],["Cyclops",10,"Scott Summers is a longtime field leader."],["Storm",10,"Ororo Munroe is a powerful weather manipulator and leader."],["Jean Grey",10,"Jean Grey is a founding X-Man and Phoenix host."],["Beast",30,"Hank McCoy is a brilliant scientist and longtime X-Man."],["Nightcrawler",30,"Kurt Wagner is a teleporting mutant."],["Rogue",30,"Rogue can absorb memories and powers through touch."],["Kitty Pryde",30,"Kitty Pryde phases through solid matter."],["Bishop",60,"Bishop is a time-displaced mutant from a dystopian future."],["Magik",60,"Illyana Rasputin is a sorceress and mutant teleporter."],["Forge",85,"Forge is a mutant inventor with an intuitive gift for technology."],["Jubilee",60,"Jubilation Lee generates explosive energy plasmoids."],
  ["Iceman",10,"Bobby Drake is a founding X-Man."],
  ["Angel",10,"Warren Worthington III is one of the original X-Men."],
@@ -183,7 +183,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["The First Firmament",85,"The First Firmament is the first cosmos in Marvel cosmology."],
  ["The Fulcrum",100,"The Fulcrum is a mysterious cosmic being linked to the Celestials and Watchers."]
  ]),
- Q("mar-05","marvel-comics","Name a member of the Fantastic Four or a close ally.","The First Family's circle reaches well beyond its original four.","fantastic4","The Fantastic Four",[
+ Q("mar-05","marvel-comics","Name a member, ally, associate or recurring opponent of the Fantastic Four.","The First Family's circle reaches well beyond its original four.","fantastic4","The Fantastic Four",[
  ["Mister Fantastic",10,"Reed Richards is the team's elastic genius.",["Reed Richards"]],["Invisible Woman",10,"Sue Storm can turn invisible and create force fields.",["Sue Storm"]],["Human Torch",10,"Johnny Storm controls flame.",["Johnny Storm"]],["The Thing",10,"Ben Grimm is the team's rocky powerhouse.",["Ben Grimm"]],["She-Hulk",30,"Jennifer Walters has joined the team in several stories."],["Crystal",60,"Crystal of the Inhumans has been closely associated with the team."],["Valeria Richards",60,"Valeria is Reed and Sue's exceptionally gifted daughter."],["H.E.R.B.I.E.",85,"H.E.R.B.I.E. is the team's robotic companion."],
  ["Ant-Man",30,"Scott Lang has worked with the Fantastic Four."],
  ["Medusa",30,"Medusa of the Inhumans has allied with the Fantastic Four."],
@@ -195,7 +195,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Dragon Man",60,"Dragon Man has been an adversary and later ally of the Fantastic Four."],
  ["Franklin Richards",100,"Franklin is Reed and Sue’s son and an essential member of the extended Fantastic Four family."]
  ]),
- Q("mar-06","marvel-comics","Name a street-level Marvel hero.","Not every hero saves the universe; some protect a neighbourhood.","street","Marvel's street-level defenders",[
+ Q("mar-06","marvel-comics","Name a street-level hero or vigilante from Marvel Comics.","Not every hero saves the universe; some protect a neighbourhood.","street","Marvel's street-level defenders",[
  ["Daredevil",10,"Matt Murdock protects Hell's Kitchen."],["Luke Cage",10,"Luke Cage is a super-strong hero from Harlem."],["Jessica Jones",30,"Jessica Jones is a private investigator with superhuman strength."],["Iron Fist",30,"Danny Rand channels the power of the Iron Fist."],["Moon Knight",30,"Marc Spector is the vigilante avatar of Khonshu."],["Misty Knight",60,"Misty Knight is a detective and martial artist with a bionic arm."],["Cloak",60,"Cloak can access the Darkforce Dimension."],["Dagger",60,"Dagger generates light daggers."],["Punisher",30,"Frank Castle is a lethal vigilante who wages a one-man war on crime.",["Frank Castle"]],
  ["Echo",30,"Maya Lopez is a skilled fighter and street-level hero."],
  ["White Tiger",30,"Several heroes have carried the White Tiger mantle."],
@@ -207,7 +207,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Silver Sable",85,"Silver Sable is a mercenary and occasional ally of Spider-Man."],
  ["Night Thrasher",100,"Dwayne Taylor is a street-level hero and founder of the New Warriors."]
  ]),
- Q("mar-07","marvel-comics","Name a mutant nation, island or major mutant community.","Mutant history has been shaped by places of refuge and conflict.","mutantlands","Mutant homelands and communities",[
+ Q("mar-07","marvel-comics","Name a mutant homeland, refuge, school, island or major mutant community.","Mutant history has been shaped by places of refuge and conflict.","mutantlands","Mutant homelands and communities",[
  ["Krakoa",10,"Krakoa becomes a sovereign mutant homeland in the modern X-Men era."],["Genosha",10,"Genosha is a nation whose history is tied to mutant oppression."],["Utopia",30,"Utopia is an island base for mutants off the coast of San Francisco."],["Muir Island",30,"Muir Island has hosted important mutant research and refuge."],["Arakko",60,"Arakko is an ancient mutant land connected to Amenth."],["Asteroid M",60,"Asteroid M has served as a mutant base under Magneto."],["The Savage Land",85,"The Savage Land has been a refuge and battleground for mutants."],["Limbo",85,"Limbo is a mystical dimension ruled by beings including Magik."],
  ["Akkaba",60,"Akkaba is a community associated with Apocalypse."],
  ["Island M",60,"Island M has served as a base for Magneto."],
@@ -216,7 +216,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ])
  ],
  "dc-comics":[
- Q("dcc-01","dc-comics","Name a member of the Justice League.","The League's roster spans Earth, space and the supernatural.","justiceleague","The Justice League",[
+ Q("dcc-01","dc-comics","Name a hero who has served in the Justice League across DC Comics eras.","The League's roster spans Earth, space and the supernatural.","justiceleague","The Justice League",[
  ["Batman",10,"Bruce Wayne is one of the League's founding members."],["Superman",10,"Clark Kent is a central member of the League."],["Wonder Woman",10,"Diana is a founding member and one of its strongest leaders."],["The Flash",10,"Several speedsters have served as the League's Flash.",["Flash"]],["Green Lantern",10,"Multiple Green Lanterns have served the League."],["Aquaman",10,"Arthur Curry is a founding League member in many continuities."],["Martian Manhunter",30,"J'onn J'onzz is a classic founding member."],["Zatanna",60,"Zatanna has served with the Justice League."],["Hawkgirl",30,"Hawkgirl is a longtime League member."],["Mister Miracle",85,"Scott Free has been associated with the League."],
  ["Green Arrow",30,"Oliver Queen has served on multiple Justice League rosters."],
  ["Black Canary",30,"Dinah Lance is a longtime League member."],
@@ -352,7 +352,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Lok Neboora",85,"Lok Neboora is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
  ["Lysandra",85,"Lysandra is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
  ]),
- Q("dcc-03","dc-comics","Name a member of the Bat-family.","Gotham's network includes partners, protégés and allies.","batfamily","The Bat-family",[
+ Q("dcc-03","dc-comics","Name a Bat-Family member, ally or extended associate from DC Comics.","Gotham's network includes partners, protégés and allies.","batfamily","The Bat-family",[
  ["Nightwing",10,"Dick Grayson becomes Nightwing after leaving the Robin identity."],["Robin",10,"Several heroes have carried the Robin mantle."],["Batgirl",10,"Barbara Gordon is one of the best-known Batgirls."],["Alfred Pennyworth",10,"Alfred is Bruce Wayne's loyal confidant."],["Red Hood",30,"Jason Todd returns as the antihero Red Hood."],["Red Robin",30,"Tim Drake takes on the Red Robin identity."],["Batwoman",30,"Kate Kane is a Gotham vigilante and Bat-family ally."],["Spoiler",60,"Stephanie Brown operates as Spoiler and has also been Robin."],["Orphan",60,"Cassandra Cain becomes the vigilante Orphan."],["The Signal",85,"Duke Thomas protects Gotham as the Signal."],
  ["Huntress",30,"Helena Bertinelli has worked alongside Batman and the Bat-family."],
  ["Azrael",30,"Jean-Paul Valley has served as Batman and an ally."],
@@ -362,7 +362,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Clownhunter",85,"Bao Pham becomes the Gotham vigilante Clownhunter."],
  ["Julia Pennyworth",100,"Julia Pennyworth is Alfred's daughter and an intelligence operative allied with Batman."]
  ]),
- Q("dcc-04","dc-comics","Name a speedster from the DC Universe.","The Speed Force has empowered heroes and villains alike.","speedsters","The Speed Force",[
+ Q("dcc-04","dc-comics","Name a speedster or Speed Force-connected character from DC Comics.","The Speed Force has empowered heroes and villains alike.","speedsters","The Speed Force",[
  ["Barry Allen",10,"Barry Allen is the best-known modern Flash."],["Wally West",10,"Wally West succeeds Barry and becomes one of the fastest heroes."],["Jay Garrick",30,"Jay Garrick is the Golden Age Flash."],["Bart Allen",30,"Bart Allen has served as Impulse, Kid Flash and the Flash."],["Jesse Quick",60,"Jesse Chambers is a speedster who has used the Jesse Quick identity."],["Max Mercury",60,"Max Mercury is a veteran speedster and Speed Force mentor."],["Eobard Thawne",30,"Eobard Thawne is the Reverse-Flash."],["Godspeed",60,"August Heart becomes the speedster villain Godspeed."],["Johnny Quick",85,"Johnny Quick is a speedster from the Crime Syndicate's world."],
  ["XS",30,"Jenni Ognats is a speedster from the Legion of Super-Heroes."],
  ["Inertia",60,"Thaddeus Thawne is a speedster antagonist."],
@@ -374,7 +374,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Avery Ho",85,"Avery Ho is the Flash of China and a member of the Flash family."],
  ["Jai West",100,"Jai West is one of Wally West's children and has super-speed powers."]
  ]),
- Q("dcc-05","dc-comics","Name an enemy of Superman.","The Man of Steel has faced threats from Earth and beyond.","supermanvillains","Superman's rogues gallery",[
+ Q("dcc-05","dc-comics","Name an enemy, rival or recurring adversary of Superman in DC Comics.","The Man of Steel has faced threats from Earth and beyond.","supermanvillains","Superman's rogues gallery",[
  ["Lex Luthor",10,"Lex Luthor is Superman's defining human adversary."],["General Zod",10,"Zod is a Kryptonian military leader and recurring foe."],["Brainiac",10,"Brainiac collects cities and knowledge across the universe."],["Doomsday",10,"Doomsday is the monster who famously kills Superman."],["Darkseid",30,"Darkseid is a cosmic tyrant and enemy of the Justice League."],["Bizarro",30,"Bizarro is a distorted counterpart of Superman."],["Metallo",60,"Metallo uses a kryptonite-powered heart."],["Mongul",60,"Mongul rules the Warworld."],["Parasite",30,"Parasite drains energy and powers from others."],["Manchester Black",85,"Manchester Black leads the Elite and challenges Superman's ideals."],
  ["Livewire",30,"Leslie Willis becomes the electricity-powered villain Livewire."],
  ["Toyman",30,"Winslow Schott is a recurring Superman enemy."],
@@ -387,7 +387,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Ultra-Humanite",85,"Ultra-Humanite is an early supervillain who has battled Superman."],
  ["Mister Mxyzptlk",100,"Mister Mxyzptlk is an imp from the Fifth Dimension who repeatedly challenges Superman."]
  ]),
- Q("dcc-06","dc-comics","Name a cosmic character, force or New Gods figure from DC Comics.","The Fourth World and DC's cosmic realms are full of powerful figures.","newgods","The New Gods and cosmic DC",[
+ Q("dcc-06","dc-comics","Name a cosmic character, force, group or realm from DC Comics.","The Fourth World and DC's cosmic realms are full of powerful figures.","newgods","The New Gods and cosmic DC",[
  ["Darkseid",10,"Darkseid rules Apokolips and seeks the Anti-Life Equation."],["Highfather",30,"Highfather leads New Genesis."],["Orion",30,"Orion is the warrior son of Darkseid raised on New Genesis."],["Mister Miracle",30,"Scott Free is the master escape artist of the New Gods."],["Big Barda",30,"Big Barda is a powerful New God and former Female Fury."],["Metron",60,"Metron travels the cosmos in the Mobius Chair."],["Lightray",60,"Lightray is a heroic New God of New Genesis."],["The Anti-Monitor",30,"The Anti-Monitor threatens the multiverse in Crisis on Infinite Earths."],["Perpetua",85,"Perpetua is a creator figure tied to the multiverse's origin."],["The Great Darkness",100,"The Great Darkness is an ancient primordial force in DC cosmology."],
  ["Granny Goodness",30,"Granny Goodness trains the forces of Apokolips."],
  ["Kalibak",30,"Kalibak is Darkseid's brutal son."],
@@ -400,7 +400,7 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["Vykin",85,"Vykin the Black is a member of the Forever People."],
  ["Takion",100,"Takion is a powerful New God connected to the Source."]
  ]),
- Q("dcc-07","dc-comics","Name a member of the Teen Titans.","The Titans have been a home for young heroes across generations.","titans","The Teen Titans",[
+ Q("dcc-07","dc-comics","Name a member or close ally of the Teen Titans across DC Comics eras.","The Titans have been a home for young heroes across generations.","titans","The Teen Titans",[
  ["Nightwing",10,"Dick Grayson led the original generation as Robin."],["Starfire",10,"Koriand'r is an alien princess with energy powers."],["Raven",10,"Raven is an empath with demonic heritage."],["Beast Boy",10,"Garfield Logan can transform into animals."],["Cyborg",10,"Victor Stone is a founding Titan in many continuities."],["Donna Troy",30,"Donna Troy is a longtime Titan and Wonder Woman ally."],["Blue Beetle",30,"Jaime Reyes has joined the Titans in modern stories."],["Superboy",30,"Conner Kent has served with the Titans."],["Kid Flash",30,"Wally West and other speedsters have been Kid Flash."],["Terra",60,"Tara Markov is a complicated and famous member of the Titans' history."],
  ["Aqualad",30,"Garth and Jackson Hyde have both used the Aqualad identity."],
  ["Wonder Girl",30,"Donna Troy and Cassie Sandsmark have served with the Titans."],
