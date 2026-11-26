@@ -240,117 +240,117 @@ export const questionSets:Record<Exclude<Universe,"mixed">,Question[]>={
  ["G'nort",60,"G'nort is a comedic but genuine Green Lantern."],
  ["Stel",85,"Stel is a robotic Green Lantern from Sector 3009."],
  ["Rot Lop Fan",85,"Rot Lop Fan is a Green Lantern who perceives sound rather than light."],
- ["Abin Sur",10,"Abin Sur is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Alan Scott",10,"Alan Scott is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Amanita",85,"Amanita is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Amnee Pree",85,"Amnee Pree is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Anya Savenlovich",85,"Anya Savenlovich is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Apros",60,"Apros is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Archon Z'gmora",100,"Archon Z'gmora is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ard Rennat",85,"Ard Rennat is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ares Bandet",85,"Ares Bandet is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Arkkis Chummuck",85,"Arkkis Chummuck is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["AR-N-O-Q",100,"AR-N-O-Q is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Artis Chep",85,"Artis Chep is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Arx",85,"Arx is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ash",85,"Ash is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ash-Pak-Glif",100,"Ash-Pak-Glif is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Avir",85,"Avir is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ayria",85,"Ayria is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Barin",85,"Barin is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Barin Char",85,"Barin Char is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Barreer Wot",85,"Barreer Wot is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["B'dg",60,"B'dg is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Bivvix",85,"Bivvix is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Blish Rrab",85,"Blish Rrab is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Bogosar",85,"Bogosar is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Branwilla",85,"Branwilla is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Breeon",85,"Breeon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Brik",60,"Brik is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Brin",85,"Brin is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Brokk",85,"Brokk is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["B'rr",85,"B'rr is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Bruks",85,"Bruks is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["B'Shi",85,"B'Shi is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Burkett",85,"Burkett is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Bzzd",60,"Bzzd is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Cary Wren",85,"Cary Wren is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Celeste Rockfish",85,"Celeste Rockfish is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Charlie Vicker",60,"Charlie Vicker is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Charqwep",100,"Charqwep is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Cherniss",85,"Cherniss is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Chogar",85,"Chogar is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Chthos-Chthas Chthatis",100,"Chthos-Chthas Chthatis is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Cimfet Tau",85,"Cimfet Tau is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["The Collective",85,"The Collective is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Cundiff Cood",100,"Cundiff Cood is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Dalor",85,"Dalor is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Daniel Young",85,"Daniel Young is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["D'aran Tuu",100,"D'aran Tuu is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Davo Yull",85,"Davo Yull is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Deeter",85,"Deeter is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Diamalon",85,"Diamalon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Dkrtzy RRR",100,"Dkrtzy RRR is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Dob Zagil",100,"Dob Zagil is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Donna Parker",85,"Donna Parker is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Driq",85,"Driq is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Droxelle",85,"Droxelle is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ebikar Hrui",85,"Ebikar Hrui is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Eddore",85,"Eddore is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ekron",85,"Ekron is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["El'Qa Sqa Zreenah",100,"El'Qa Sqa Zreenah is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ermey",100,"Ermey is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Fentara Rrab",85,"Fentara Rrab is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Flodo Span",85,"Flodo Span is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Gala De",100,"Gala De is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Galius Zed",60,"Galius Zed is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Galte-Re",85,"Galte-Re is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Garl Rathbone",100,"Garl Rathbone is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Garmin Vid",85,"Garmin Vid is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ghrelk",100,"Ghrelk is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ghr'll",100,"Ghr'll is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["G'hu",85,"G'hu is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Gion",100,"Gion is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Gk'd",100,"Gk'd is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Gpaak",85,"Gpaak is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Graf Toren",60,"Graf Toren is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Greb",100,"Greb is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Greet",100,"Greet is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Gretti",85,"Gretti is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Grojamm",100,"Grojamm is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Grumb",100,"Grumb is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Hammeroon",100,"Hammeroon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Harvid",85,"Harvid is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Hollika Rahn",85,"Hollika Rahn is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Horoq Nnot",100,"Horoq Nnot is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Jeryll",85,"Jeryll is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Jewelius Blak",100,"Jewelius Blak is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Joanqin",85,"Joanqin is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Jong Li",85,"Jong Li is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kaylark",85,"Kaylark is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ke'Haan",60,"Ke'Haan is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Khen-To",85,"Khen-To is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kentor Omoto",100,"Kentor Omoto is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kho Kharhi",100,"Kho Kharhi is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Ki-nilg",100,"Ki-nilg is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kkrudd",100,"Kkrudd is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kraken",85,"Kraken is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Krista X",85,"Krista X is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Krydel-4",85,"Krydel-4 is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["K'ryssma",100,"K'ryssma is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["KT21",100,"KT21 is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kwo Varrikk",100,"Kwo Varrikk is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Kworri",100,"Kworri is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Laham",85,"Laham is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Lan Dibbux",100,"Lan Dibbux is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Larvox",60,"Larvox is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Lashorr",85,"Lashorr is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Leezle Pon",85,"Leezle Pon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Liana",85,"Liana is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Lin Canar",85,"Lin Canar is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Lodar Monak",100,"Lodar Monak is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Lok Neboora",85,"Lok Neboora is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
- ["Lysandra",85,"Lysandra is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."]
+ ["Abin Sur",10,"Abin Sur is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Alan Scott",10,"Alan Scott is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Amanita",85,"Amanita is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Amnee Pree",85,"Amnee Pree is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Anya Savenlovich",85,"Anya Savenlovich is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Apros",60,"Apros is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Archon Z'gmora",100,"Archon Z'gmora is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ard Rennat",85,"Ard Rennat is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ares Bandet",85,"Ares Bandet is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Arkkis Chummuck",85,"Arkkis Chummuck is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["AR-N-O-Q",100,"AR-N-O-Q is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Artis Chep",85,"Artis Chep is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Arx",85,"Arx is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ash",85,"Ash is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ash-Pak-Glif",100,"Ash-Pak-Glif is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Avir",85,"Avir is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ayria",85,"Ayria is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Barin",85,"Barin is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Barin Char",85,"Barin Char is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Barreer Wot",85,"Barreer Wot is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["B'dg",60,"B'dg is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Bivvix",85,"Bivvix is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Blish Rrab",85,"Blish Rrab is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Bogosar",85,"Bogosar is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Branwilla",85,"Branwilla is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Breeon",85,"Breeon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Brik",60,"Brik is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Brin",85,"Brin is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Brokk",85,"Brokk is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["B'rr",85,"B'rr is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Bruks",85,"Bruks is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["B'Shi",85,"B'Shi is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Burkett",85,"Burkett is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Bzzd",60,"Bzzd is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Cary Wren",85,"Cary Wren is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Celeste Rockfish",85,"Celeste Rockfish is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Charlie Vicker",60,"Charlie Vicker is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Charqwep",100,"Charqwep is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Cherniss",85,"Cherniss is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Chogar",85,"Chogar is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Chthos-Chthas Chthatis",100,"Chthos-Chthas Chthatis is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Cimfet Tau",85,"Cimfet Tau is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["The Collective",85,"The Collective is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Cundiff Cood",100,"Cundiff Cood is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Dalor",85,"Dalor is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Daniel Young",85,"Daniel Young is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["D'aran Tuu",100,"D'aran Tuu is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Davo Yull",85,"Davo Yull is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Deeter",85,"Deeter is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Diamalon",85,"Diamalon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Dkrtzy RRR",100,"Dkrtzy RRR is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Dob Zagil",100,"Dob Zagil is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Donna Parker",85,"Donna Parker is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Driq",85,"Driq is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Droxelle",85,"Droxelle is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ebikar Hrui",85,"Ebikar Hrui is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Eddore",85,"Eddore is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ekron",85,"Ekron is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["El'Qa Sqa Zreenah",100,"El'Qa Sqa Zreenah is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ermey",100,"Ermey is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Fentara Rrab",85,"Fentara Rrab is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Flodo Span",85,"Flodo Span is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Gala De",100,"Gala De is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Galius Zed",60,"Galius Zed is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Galte-Re",85,"Galte-Re is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Garl Rathbone",100,"Garl Rathbone is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Garmin Vid",85,"Garmin Vid is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ghrelk",100,"Ghrelk is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ghr'll",100,"Ghr'll is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["G'hu",85,"G'hu is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Gion",100,"Gion is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Gk'd",100,"Gk'd is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Gpaak",85,"Gpaak is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Graf Toren",60,"Graf Toren is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Greb",100,"Greb is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Greet",100,"Greet is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Gretti",85,"Gretti is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Grojamm",100,"Grojamm is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Grumb",100,"Grumb is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Hammeroon",100,"Hammeroon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Harvid",85,"Harvid is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Hollika Rahn",85,"Hollika Rahn is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Horoq Nnot",100,"Horoq Nnot is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Jeryll",85,"Jeryll is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Jewelius Blak",100,"Jewelius Blak is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Joanqin",85,"Joanqin is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Jong Li",85,"Jong Li is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kaylark",85,"Kaylark is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ke'Haan",60,"Ke'Haan is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Khen-To",85,"Khen-To is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kentor Omoto",100,"Kentor Omoto is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kho Kharhi",100,"Kho Kharhi is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Ki-nilg",100,"Ki-nilg is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kkrudd",100,"Kkrudd is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kraken",85,"Kraken is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Krista X",85,"Krista X is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Krydel-4",85,"Krydel-4 is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["K'ryssma",100,"K'ryssma is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["KT21",100,"KT21 is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kwo Varrikk",100,"Kwo Varrikk is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Kworri",100,"Kworri is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Laham",85,"Laham is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Lan Dibbux",100,"Lan Dibbux is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Larvox",60,"Larvox is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Lashorr",85,"Lashorr is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Leezle Pon",85,"Leezle Pon is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Liana",85,"Liana is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Lin Canar",85,"Lin Canar is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Lodar Monak",100,"Lodar Monak is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Lok Neboora",85,"Lok Neboora is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
+ ["Lysandra",85,"Lysandra is recorded as a member of the Green Lantern Corps in DCU Guide's membership index."],
  ]),
  Q("dcc-03","dc-comics","Name a member of the Bat-family.","Gotham's network includes partners, protégés and allies.","batfamily","The Bat-family",[
  ["Nightwing",10,"Dick Grayson becomes Nightwing after leaving the Robin identity."],["Robin",10,"Several heroes have carried the Robin mantle."],["Batgirl",10,"Barbara Gordon is one of the best-known Batgirls."],["Alfred Pennyworth",10,"Alfred is Bruce Wayne's loyal confidant."],["Red Hood",30,"Jason Todd returns as the antihero Red Hood."],["Red Robin",30,"Tim Drake takes on the Red Robin identity."],["Batwoman",30,"Kate Kane is a Gotham vigilante and Bat-family ally."],["Spoiler",60,"Stephanie Brown operates as Spoiler and has also been Robin."],["Orphan",60,"Cassandra Cain becomes the vigilante Orphan."],["The Signal",85,"Duke Thomas protects Gotham as the Signal."],
