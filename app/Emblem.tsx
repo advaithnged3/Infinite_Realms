@@ -60,7 +60,30 @@ cat:<><path d="M31 70 37 18l38 34 25-12 25 12 38-34 6 52-15 59-54 38-54-38Z"/><p
 bane:<><path d="M100 20 154 46v70l-54 64-54-64V46Z"/><path d="M61 82h78M61 103h78M70 125h60M100 46v108"/></>,
 brainiac:<><path d="M100 20 157 48v75l-57 55-57-55V48Z"/><path d="M65 70h70M65 95h70M65 120h70M100 48v104"/></>
 };
+const officialLogos:Record<string,string>={
+"batman":"https://commons.wikimedia.org/wiki/Special:FilePath/Batman%20symbol.svg",
+"hal-jordan":"https://commons.wikimedia.org/wiki/Special:FilePath/Green%20lantern.svg",
+"john-stewart":"https://commons.wikimedia.org/wiki/Special:FilePath/Green%20lantern.svg",
+"captain-america":"https://commons.wikimedia.org/wiki/Special:FilePath/Captain%20America%27s%20Shield%20%282010-present%29.svg",
+"spider-man":"https://commons.wikimedia.org/wiki/Special:FilePath/Spider-Man-Logo.svg",
+"hulk":"https://commons.wikimedia.org/wiki/Special:FilePath/Hulk-logo.svg",
+"flash":"https://commons.wikimedia.org/wiki/Special:FilePath/The%20flash%20classic%20logo.png",
+"iron-man":"https://commons.wikimedia.org/wiki/Special:FilePath/Iron%20Man%20-%202008%20movie%20logo.svg",
+"black-panther":"https://commons.wikimedia.org/wiki/Special:FilePath/Black%20Panther%20Logo%20Black.svg",
+"wonder-woman":"https://commons.wikimedia.org/wiki/Special:FilePath/Wonder%20woman%20golden%20logo.png",
+"superman":"https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20comics%20logo.png",
+"supergirl":"https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20comics%20logo.png",
+"captain-marvel":"https://commons.wikimedia.org/wiki/Special:FilePath/Captain%20Marvel%20Logo.svg",
+"deadpool":"https://commons.wikimedia.org/wiki/Special:FilePath/Deadpool%20%26%20Wolverine%20Logo%20%28Red%20and%20Yellow%29.svg",
+"doctor-strange":"https://commons.wikimedia.org/wiki/Special:FilePath/Doctor-Strange-logo.svg",
+"green-arrow":"https://commons.wikimedia.org/wiki/Special:FilePath/Green%20Arrow%20logo.svg",
+"aquaman":"https://commons.wikimedia.org/wiki/Special:FilePath/Aquaman%20logo.svg",
+"blue-beetle":"https://commons.wikimedia.org/wiki/Special:FilePath/Blue%20Beetle%20%28film%29%20logo.png",
+"zatanna":"https://commons.wikimedia.org/wiki/Special:FilePath/ZatannaTitle.png"
+};
 export function HeroEmblem({character,size=100}:{character:HeroCharacter;size?:number}){
+const logo=officialLogos[character.id];
+if(logo)return <div className="hero-emblem-wrap" style={{width:size,height:size}}><img src={logo} alt={character.name+" official emblem"} loading="lazy"/></div>;
 return <svg className="hero-emblem" width={size} height={size} viewBox="0 0 200 200" role="img" aria-label={character.name+" emblem"} focusable="false">
 <circle cx="100" cy="100" r="92" className="emblem-ring"/><circle cx="100" cy="100" r="77" className="emblem-inner"/>
 <g transform="translate(0 0)" fill={character.color} stroke="#fff" strokeWidth="3.5" strokeLinejoin="round" strokeLinecap="round" className="emblem-symbol">{shapes[character.mark]||shapes.star}</g>
