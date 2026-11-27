@@ -831,3 +831,12 @@ body,.ir-app{color:#fff;background-color:#050713}
 }
 @keyframes emblem-surge{0%,100%{transform:scale(.88);filter:drop-shadow(0 0 14px rgba(255,255,255,.35))}50%{transform:scale(1.12);filter:drop-shadow(0 0 36px rgba(255,225,107,.9))}}
 @media(prefers-reduced-motion:reduce){.ascension-emblem,.ascension-emblem:before,.ascension-emblem:after,.ascension-emblem span{animation:none!important}}
+
+.quiz-ascension-emblem{position:absolute;z-index:3;left:50%;top:44%;width:clamp(96px,12vw,160px);aspect-ratio:1;display:grid;place-items:center;transform:translate(-50%,-50%);border:2px solid rgba(255,255,255,.8);border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.2),rgba(5,8,28,.78) 60%,transparent 72%);box-shadow:0 0 0 10px rgba(255,255,255,.05),0 0 0 22px rgba(39,231,255,.07),0 0 42px rgba(39,231,255,.48),inset 0 0 30px rgba(255,229,0,.22);animation:quiz-emblem-dive 6s cubic-bezier(.42,0,.58,1) infinite}
+.quiz-ascension-emblem:before,.quiz-ascension-emblem:after{content:"";position:absolute;inset:-14px;border:2px solid rgba(255,229,0,.58);border-radius:50%;transform:rotateX(68deg);animation:portal-spin 12s linear infinite}
+.quiz-ascension-emblem:after{inset:-27px;border-color:rgba(39,231,255,.4);animation-duration:18s;animation-direction:reverse}
+.quiz-ascension-emblem span{font-size:clamp(48px,7vw,82px);filter:drop-shadow(0 0 22px rgba(255,255,255,.8))}
+.quiz-ascension-emblem small{position:absolute;bottom:-34px;white-space:nowrap;font:800 7px 'DM Mono',monospace;letter-spacing:.17em;color:#fff;text-shadow:0 2px 8px #000}
+@keyframes quiz-emblem-dive{0%,100%{transform:translate(-50%,-50%) translate3d(-8px,30px,-35px) scale(.72) rotate(-12deg);opacity:.75}45%{transform:translate(-50%,-50%) translate3d(8px,-36px,45px) scale(1.1) rotate(12deg);opacity:1}72%{transform:translate(-50%,-50%) translate3d(0,-10px,15px) scale(.92) rotate(-4deg);opacity:.95}}
+@media(max-width:760px){.quiz-ascension-emblem{width:106px}.quiz-ascension-emblem span{font-size:54px}}
+@media(prefers-reduced-motion:reduce){.quiz-ascension-emblem,.quiz-ascension-emblem:before,.quiz-ascension-emblem:after{animation:none!important}}
