@@ -817,3 +817,17 @@ body,.ir-app{color:#fff;background-color:#050713}
 .ir-footer{color:#d9e7ff}
 @media(max-width:760px){.ascension-emblem{left:62%;top:43%;width:clamp(125px,34vw,190px);opacity:.92}.ascension-emblem span{font-size:72px}.ascension-emblem small{font-size:7px}.nav-clock{margin-left:auto}.nav-clock b{font-size:18px}.timer-pill{position:static!important;min-width:148px!important}}
 @media(prefers-reduced-motion:reduce){.ascension-emblem,.ascension-emblem span{animation:none!important}}
+
+/* The emblem now travels through the portal field, not merely hovering in place. */
+.ascension-emblem{animation:emblem-traverse 8.5s cubic-bezier(.42,0,.58,1) infinite!important;transform-style:preserve-3d;perspective:900px}
+.ascension-emblem:before{animation:portal-spin 13s linear infinite}
+.ascension-emblem:after{animation:portal-spin 19s linear infinite reverse}
+.ascension-emblem span{animation:emblem-surge 4.25s ease-in-out infinite!important}
+@keyframes emblem-traverse{
+  0%,100%{transform:translate(-50%,-50%) translate3d(-8px,34px,-40px) scale(.72) rotate(-14deg);filter:brightness(.78) saturate(1.2)}
+  24%{transform:translate(-50%,-50%) translate3d(18px,-6px,10px) scale(.92) rotate(4deg);filter:brightness(1.08) saturate(1.5)}
+  52%{transform:translate(-50%,-50%) translate3d(-12px,-62px,55px) scale(1.12) rotate(13deg);filter:brightness(1.28) saturate(1.8)}
+  78%{transform:translate(-50%,-50%) translate3d(10px,-22px,18px) scale(.94) rotate(-4deg);filter:brightness(1.05) saturate(1.5)}
+}
+@keyframes emblem-surge{0%,100%{transform:scale(.88);filter:drop-shadow(0 0 14px rgba(255,255,255,.35))}50%{transform:scale(1.12);filter:drop-shadow(0 0 36px rgba(255,225,107,.9))}}
+@media(prefers-reduced-motion:reduce){.ascension-emblem,.ascension-emblem:before,.ascension-emblem:after,.ascension-emblem span{animation:none!important}}
