@@ -3,11 +3,11 @@ export type AnswerOption = { value:string; aliases:string[]; points:10|30|60|85|
 export type Question = { id:string; universe:Exclude<Universe,"mixed">; prompt:string; hint:string; answers:AnswerOption[]; visual:string; visualAlt:string };
 export const universeLabels:Record<Universe,string>={mixed:"Daily Convergence",mcu:"Marvel Cinematic Universe","dc-movies":"DC Films","marvel-comics":"Marvel Comics","dc-comics":"DC Comics"};
 export const rarity:Record<number,{name:string;description:string;color:string}>={
- 10:{name:"STREET-LEVEL",description:"A familiar face from the front lines",color:"#a8c8ff"},
- 30:{name:"DEEP CUT",description:"A detail true fans remember",color:"#65d6c2"},
- 60:{name:"SUPERHUMAN",description:"A serious fan's pull",color:"#a98cff"},
- 85:{name:"COSMIC",description:"Knowledge from the far reaches",color:"#ffad70"},
- 100:{name:"OMNIVERSAL",description:"An extraordinary deep-lore discovery",color:"#ffe078"}
+ 10:{name:"STREET LEVEL",description:"Street Level",color:"#8ec5ff"},
+ 30:{name:"CITY LEVEL",description:"City Level",color:"#53e4bf"},
+ 60:{name:"PLANETARY",description:"Planetary",color:"#c39aff"},
+ 85:{name:"GALACTIC MENACE",description:"Galactic Menace",color:"#ff9c56"},
+ 100:{name:"UNIVERSAL THREAT",description:"Universal Threat",color:"#fff071"}
 };
 const A=(rows:[string,10|30|60|85|100,string,string[]?][]):AnswerOption[]=>rows.map(([value,points,explanation,aliases=[]])=>({value,points,explanation,aliases}));
 const Q=(id:string,universe:Question["universe"],prompt:string,hint:string,visual:string,visualAlt:string,rows:[string,10|30|60|85|100,string,string[]?][]):Question=>({id,universe,prompt,hint,visual,visualAlt,answers:A(rows)});
